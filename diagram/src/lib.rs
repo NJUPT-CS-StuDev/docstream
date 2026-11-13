@@ -1,7 +1,8 @@
-//! Mermaid diagrams laid out on the device, the same on every client: flowcharts, state diagrams and sequence
-//! diagrams, given back as paths and words a client draws in its own font and colours, or as SVG.
+//! Mermaid diagrams laid out on the device, the same on every client: flowcharts, state diagrams, sequence diagrams
+//! and mind maps, given back as paths and words a client draws in its own font and colours, or as SVG.
 mod draw;
 mod flow;
+mod mind;
 mod sequence;
 
 pub use draw::{Diagram, Fill, Item};
@@ -14,16 +15,21 @@ pub fn diagram(source: &str) -> Option<Diagram> {
         let line = raw.trim();
         if line == "---" && (i == 0 || front) { front = !front; continue; }
         if front { continue; }
-        let line = match line.find("%%") { Some(at) => line[..at].trim_end(), None => line };
-        if !line.is_empty() { lines.push(line); }
+        // Indentation is kept: a mind map's outline is written in it.
+        let line = match raw.find("%%") { Some(at) => raw[..at].trim_end(), None => raw.trim_end() };
+        if !line.trim().is_empty() { lines.push(line); }
     }
-    let (header, body) = lines.split_first()?;
+    let (header, raw) = lines.split_first()?;
+    let header = header.trim();
     let kind = header.split_whitespace().next()?;
     let rest = header[kind.len()..].trim();
+    let body: Vec<&str> = raw.iter().map(|l| l.trim()).collect();
+    let body = &body[..];
     match kind {
         "graph" | "flowchart" | "flowchart-elk" => flow::flowchart(rest, body),
         "stateDiagram" | "stateDiagram-v2" => flow::states(body),
         "sequenceDiagram" => sequence::sequence(body),
+        "mindmap" => mind::mindmap(raw),
         _ => None,
     }
 }

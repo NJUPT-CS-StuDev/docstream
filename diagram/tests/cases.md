@@ -73,3 +73,46 @@ sequenceDiagram
     Note over Alice,Bob: A typical interaction
     Bob-)Alice: Fine, thanks
 ```
+
+```mermaid
+mindmap
+  root((StuDev))
+    课表
+      课程
+      考试
+      任务
+    地图
+      教学楼
+      路线
+    搜索
+      资料
+    AI
+      调用全部功能<br>流式回答
+```
+
+```mermaid
+mindmap
+  root(("Is 'Rizz' the Secret to<br>Getting Ahead at Work?"))
+    Why to be rizz?
+      Comparison
+        Confident: effortlessly hold court
+        Nervous: mental internal friction
+      Benefits
+        It can lubricate social interactions,<br>win us friends, and score promotions
+    What is rizz?
+      Not about some grand performance
+      A state we elicit in other people
+      Fostering connection and making our<br>conversation partners pleasure
+    How to be rizz?
+      Approachable and relatable
+        Make them feel they know you
+        Remember the details and<br>dates of people’s lives
+        Your own handwriting
+      Everyone is important
+        Chat with everyone
+      Charisma for introverts
+        Using nonverbal cues
+        Show your actual interests
+      Embracing your stumbles
+        Imperfect people are more popular
+```

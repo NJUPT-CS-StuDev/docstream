@@ -1328,5 +1328,857 @@
         "bold": false
       }
     ]
+  },
+  {
+    "x": -258.7,
+    "y": -87.0,
+    "width": 471.6,
+    "height": 174.0,
+    "items": [
+      {
+        "type": "path",
+        "d": "M-36.8 0A36.8 36.8 0 0 1 36.8 0A36.8 36.8 0 0 1 -36.8 0Z",
+        "fill": "soft",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 0.0,
+        "y": 0.0,
+        "text": "StuDev",
+        "size": 14.0,
+        "bold": true
+      },
+      {
+        "type": "path",
+        "d": "M36.8 0C60.8 0 60.8 0 84.8 0",
+        "fill": "none",
+        "stroke": 2.0,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M92.8 -16.8L128.8 -16.8A8 8 0 0 1 136.8 -8.8L136.8 8.8A8 8 0 0 1 128.8 16.8L92.8 16.8A8 8 0 0 1 84.8 8.8L84.8 -8.8A8 8 0 0 1 92.8 -16.8Z",
+        "fill": "soft",
+        "stroke": 1.6,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 110.8,
+        "y": 0.0,
+        "text": "课表",
+        "size": 14.0,
+        "bold": true
+      },
+      {
+        "type": "path",
+        "d": "M136.8 0C154.8 0 154.8 -23.8 172.8 -23.8",
+        "fill": "none",
+        "stroke": 1.6,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M172.8 -23.8L208.8 -23.8",
+        "fill": "none",
+        "stroke": 1.2,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 190.8,
+        "y": -38.6,
+        "text": "课程",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M136.8 0C154.8 0 154.8 13.8 172.8 13.8",
+        "fill": "none",
+        "stroke": 1.6,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M172.8 13.8L208.8 13.8",
+        "fill": "none",
+        "stroke": 1.2,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 190.8,
+        "y": -1.0,
+        "text": "考试",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M136.8 0C154.8 0 154.8 51.4 172.8 51.4",
+        "fill": "none",
+        "stroke": 1.6,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M172.8 51.4L208.8 51.4",
+        "fill": "none",
+        "stroke": 1.2,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 190.8,
+        "y": 36.6,
+        "text": "任务",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M-36.8 0C-60.8 0 -60.8 -50.4 -84.8 -50.4",
+        "fill": "none",
+        "stroke": 2.0,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M-128.8 -67.2L-92.8 -67.2A8 8 0 0 1 -84.8 -59.2L-84.8 -41.6A8 8 0 0 1 -92.8 -33.6L-128.8 -33.6A8 8 0 0 1 -136.8 -41.6L-136.8 -59.2A8 8 0 0 1 -128.8 -67.2Z",
+        "fill": "soft",
+        "stroke": 1.6,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": -110.8,
+        "y": -50.4,
+        "text": "地图",
+        "size": 14.0,
+        "bold": true
+      },
+      {
+        "type": "path",
+        "d": "M-136.8 -50.4C-154.8 -50.4 -154.8 -55.4 -172.8 -55.4",
+        "fill": "none",
+        "stroke": 1.6,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M-222.8 -55.4L-172.8 -55.4",
+        "fill": "none",
+        "stroke": 1.2,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": -197.8,
+        "y": -70.2,
+        "text": "教学楼",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M-136.8 -50.4C-154.8 -50.4 -154.8 -17.8 -172.8 -17.8",
+        "fill": "none",
+        "stroke": 1.6,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M-208.8 -17.8L-172.8 -17.8",
+        "fill": "none",
+        "stroke": 1.2,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": -190.8,
+        "y": -32.6,
+        "text": "路线",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M-36.8 0C-60.8 0 -60.8 9 -84.8 9",
+        "fill": "none",
+        "stroke": 2.0,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M-128.8 -7.8L-92.8 -7.8A8 8 0 0 1 -84.8 0.2L-84.8 17.8A8 8 0 0 1 -92.8 25.8L-128.8 25.8A8 8 0 0 1 -136.8 17.8L-136.8 0.2A8 8 0 0 1 -128.8 -7.8Z",
+        "fill": "soft",
+        "stroke": 1.6,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": -110.8,
+        "y": 9.0,
+        "text": "搜索",
+        "size": 14.0,
+        "bold": true
+      },
+      {
+        "type": "path",
+        "d": "M-136.8 9C-154.8 9 -154.8 22.8 -172.8 22.8",
+        "fill": "none",
+        "stroke": 1.6,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M-208.8 22.8L-172.8 22.8",
+        "fill": "none",
+        "stroke": 1.2,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": -190.8,
+        "y": 8.0,
+        "text": "资料",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M-36.8 0C-60.8 0 -60.8 59.4 -84.8 59.4",
+        "fill": "none",
+        "stroke": 2.0,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M-118.7 42.6L-92.8 42.6A8 8 0 0 1 -84.8 50.6L-84.8 68.2A8 8 0 0 1 -92.8 76.2L-118.7 76.2A8 8 0 0 1 -126.7 68.2L-126.7 50.6A8 8 0 0 1 -118.7 42.6Z",
+        "fill": "soft",
+        "stroke": 1.6,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": -105.8,
+        "y": 59.4,
+        "text": "AI",
+        "size": 14.0,
+        "bold": true
+      },
+      {
+        "type": "path",
+        "d": "M-126.7 59.4C-144.7 59.4 -144.7 83 -162.7 83",
+        "fill": "none",
+        "stroke": 1.6,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M-254.7 83L-162.7 83",
+        "fill": "none",
+        "stroke": 1.2,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": -208.7,
+        "y": 48.6,
+        "text": "调用全部功能",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "text",
+        "x": -208.7,
+        "y": 68.2,
+        "text": "流式回答",
+        "size": 14.0,
+        "bold": false
+      }
+    ]
+  },
+  {
+    "x": -717.3,
+    "y": -170.6,
+    "width": 1349.7,
+    "height": 341.2,
+    "items": [
+      {
+        "type": "path",
+        "d": "M-88.2 0A88.2 88.2 0 0 1 88.2 0A88.2 88.2 0 0 1 -88.2 0Z",
+        "fill": "soft",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 0.0,
+        "y": -9.8,
+        "text": "Is 'Rizz' the Secret to",
+        "size": 14.0,
+        "bold": true
+      },
+      {
+        "type": "text",
+        "x": 0.0,
+        "y": 9.8,
+        "text": "Getting Ahead at Work?",
+        "size": 14.0,
+        "bold": true
+      },
+      {
+        "type": "path",
+        "d": "M88.2 0C112.2 0 112.2 -85.8 136.2 -85.8",
+        "fill": "none",
+        "stroke": 2.0,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M144.2 -102.6L249.9 -102.6A8 8 0 0 1 257.9 -94.6L257.9 -77A8 8 0 0 1 249.9 -69L144.2 -69A8 8 0 0 1 136.2 -77L136.2 -94.6A8 8 0 0 1 144.2 -102.6Z",
+        "fill": "soft",
+        "stroke": 1.6,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 197.1,
+        "y": -85.8,
+        "text": "Why to be rizz?",
+        "size": 14.0,
+        "bold": true
+      },
+      {
+        "type": "path",
+        "d": "M257.9 -85.8C275.9 -85.8 275.9 -120.2 293.9 -120.2",
+        "fill": "none",
+        "stroke": 1.6,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M293.9 -120.2L376.7 -120.2",
+        "fill": "none",
+        "stroke": 1.2,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 335.3,
+        "y": -135.0,
+        "text": "Comparison",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M376.7 -120.2C394.7 -120.2 394.7 -139 412.7 -139",
+        "fill": "none",
+        "stroke": 1.2,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M412.7 -139L628.4 -139",
+        "fill": "none",
+        "stroke": 1.2,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 520.6,
+        "y": -153.8,
+        "text": "Confident: effortlessly hold court",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M376.7 -120.2C394.7 -120.2 394.7 -101.4 412.7 -101.4",
+        "fill": "none",
+        "stroke": 1.2,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M412.7 -101.4L623.7 -101.4",
+        "fill": "none",
+        "stroke": 1.2,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 518.2,
+        "y": -116.2,
+        "text": "Nervous: mental internal friction",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M257.9 -85.8C275.9 -85.8 275.9 -34.4 293.9 -34.4",
+        "fill": "none",
+        "stroke": 1.6,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M293.9 -34.4L354.8 -34.4",
+        "fill": "none",
+        "stroke": 1.2,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 324.4,
+        "y": -49.2,
+        "text": "Benefits",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M354.8 -34.4C372.8 -34.4 372.8 -5 390.8 -5",
+        "fill": "none",
+        "stroke": 1.2,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M390.8 -5L558.2 -5",
+        "fill": "none",
+        "stroke": 1.2,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 474.5,
+        "y": -78.6,
+        "text": "It can lubricate social",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "text",
+        "x": 474.5,
+        "y": -59.0,
+        "text": "interactions,",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "text",
+        "x": 474.5,
+        "y": -39.4,
+        "text": "win us friends, and score",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "text",
+        "x": 474.5,
+        "y": -19.8,
+        "text": "promotions",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M88.2 0C112.2 0 112.2 85.8 136.2 85.8",
+        "fill": "none",
+        "stroke": 2.0,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M144.2 69L234.5 69A8 8 0 0 1 242.5 77L242.5 94.6A8 8 0 0 1 234.5 102.6L144.2 102.6A8 8 0 0 1 136.2 94.6L136.2 77A8 8 0 0 1 144.2 69Z",
+        "fill": "soft",
+        "stroke": 1.6,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 189.4,
+        "y": 85.8,
+        "text": "What is rizz?",
+        "size": 14.0,
+        "bold": true
+      },
+      {
+        "type": "path",
+        "d": "M242.5 85.8C260.5 85.8 260.5 52.2 278.5 52.2",
+        "fill": "none",
+        "stroke": 1.6,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M278.5 52.2L424.8 52.2",
+        "fill": "none",
+        "stroke": 1.2,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 351.7,
+        "y": 17.8,
+        "text": "Not about some grand",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "text",
+        "x": 351.7,
+        "y": 37.4,
+        "text": "performance",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M242.5 85.8C260.5 85.8 260.5 89.8 278.5 89.8",
+        "fill": "none",
+        "stroke": 1.6,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M278.5 89.8L487.6 89.8",
+        "fill": "none",
+        "stroke": 1.2,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 383.0,
+        "y": 75.0,
+        "text": "A state we elicit in other people",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M242.5 85.8C260.5 85.8 260.5 166.6 278.5 166.6",
+        "fill": "none",
+        "stroke": 1.6,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M278.5 166.6L496.2 166.6",
+        "fill": "none",
+        "stroke": 1.2,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 387.4,
+        "y": 112.6,
+        "text": "Fostering connection and making",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "text",
+        "x": 387.4,
+        "y": 132.2,
+        "text": "our",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "text",
+        "x": 387.4,
+        "y": 151.8,
+        "text": "conversation partners pleasure",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M-88.2 0C-112.2 0 -112.2 0 -136.2 0",
+        "fill": "none",
+        "stroke": 2.0,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M-251.3 -16.8L-144.2 -16.8A8 8 0 0 1 -136.2 -8.8L-136.2 8.8A8 8 0 0 1 -144.2 16.8L-251.3 16.8A8 8 0 0 1 -259.3 8.8L-259.3 -8.8A8 8 0 0 1 -251.3 -16.8Z",
+        "fill": "soft",
+        "stroke": 1.6,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": -197.8,
+        "y": 0.0,
+        "text": "How to be rizz?",
+        "size": 14.0,
+        "bold": true
+      },
+      {
+        "type": "path",
+        "d": "M-259.3 0C-277.3 0 -277.3 -71.2 -295.3 -71.2",
+        "fill": "none",
+        "stroke": 1.6,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M-474.7 -71.2L-295.3 -71.2",
+        "fill": "none",
+        "stroke": 1.2,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": -385.0,
+        "y": -86.0,
+        "text": "Approachable and relatable",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M-474.7 -71.2C-492.7 -71.2 -492.7 -118.6 -510.7 -118.6",
+        "fill": "none",
+        "stroke": 1.2,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M-713.3 -118.6L-510.7 -118.6",
+        "fill": "none",
+        "stroke": 1.2,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": -612.0,
+        "y": -133.4,
+        "text": "Make them feel they know you",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M-474.7 -71.2C-492.7 -71.2 -492.7 -61.4 -510.7 -61.4",
+        "fill": "none",
+        "stroke": 1.2,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M-683.6 -61.4L-510.7 -61.4",
+        "fill": "none",
+        "stroke": 1.2,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": -597.1,
+        "y": -95.8,
+        "text": "Remember the details and",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "text",
+        "x": -597.1,
+        "y": -76.2,
+        "text": "dates of people’s lives",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M-474.7 -71.2C-492.7 -71.2 -492.7 -23.8 -510.7 -23.8",
+        "fill": "none",
+        "stroke": 1.2,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M-657 -23.8L-510.7 -23.8",
+        "fill": "none",
+        "stroke": 1.2,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": -583.8,
+        "y": -38.6,
+        "text": "Your own handwriting",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M-259.3 0C-277.3 0 -277.3 13.8 -295.3 13.8",
+        "fill": "none",
+        "stroke": 1.6,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M-442.5 13.8L-295.3 13.8",
+        "fill": "none",
+        "stroke": 1.2,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": -368.9,
+        "y": -1.0,
+        "text": "Everyone is important",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M-442.5 13.8C-460.5 13.8 -460.5 13.8 -478.5 13.8",
+        "fill": "none",
+        "stroke": 1.2,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M-609.4 13.8L-478.5 13.8",
+        "fill": "none",
+        "stroke": 1.2,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": -543.9,
+        "y": -1.0,
+        "text": "Chat with everyone",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M-259.3 0C-277.3 0 -277.3 70.2 -295.3 70.2",
+        "fill": "none",
+        "stroke": 1.6,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M-450 70.2L-295.3 70.2",
+        "fill": "none",
+        "stroke": 1.2,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": -372.7,
+        "y": 55.4,
+        "text": "Charisma for introverts",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M-450 70.2C-468 70.2 -468 51.4 -486 51.4",
+        "fill": "none",
+        "stroke": 1.2,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M-629 51.4L-486 51.4",
+        "fill": "none",
+        "stroke": 1.2,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": -557.5,
+        "y": 36.6,
+        "text": "Using nonverbal cues",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M-450 70.2C-468 70.2 -468 89 -486 89",
+        "fill": "none",
+        "stroke": 1.2,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M-664.8 89L-486 89",
+        "fill": "none",
+        "stroke": 1.2,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": -575.4,
+        "y": 74.2,
+        "text": "Show your actual interests",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M-259.3 0C-277.3 0 -277.3 136.4 -295.3 136.4",
+        "fill": "none",
+        "stroke": 1.6,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M-464.3 136.4L-295.3 136.4",
+        "fill": "none",
+        "stroke": 1.2,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": -379.8,
+        "y": 121.6,
+        "text": "Embracing your stumbles",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M-464.3 136.4C-482.3 136.4 -482.3 146.2 -500.3 146.2",
+        "fill": "none",
+        "stroke": 1.2,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M-679.7 146.2L-500.3 146.2",
+        "fill": "none",
+        "stroke": 1.2,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": -590.0,
+        "y": 111.8,
+        "text": "Imperfect people are more",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "text",
+        "x": -590.0,
+        "y": 131.4,
+        "text": "popular",
+        "size": 14.0,
+        "bold": false
+      }
+    ]
   }
 ]

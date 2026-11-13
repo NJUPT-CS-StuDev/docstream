@@ -21,10 +21,11 @@ outlines, rules and words (CJK in `\text{}`, drawn by the client's own font), or
 around it. What is not understood is shown as written; an unfinished formula, streamed a character at a time, still
 typesets.
 
-**Diagrams.** Mermaid flowcharts, state diagrams and sequence diagrams are laid out on the device: a flowchart in
+**Diagrams.** Mermaid flowcharts, state diagrams, sequence diagrams and mind maps are laid out on the device: a flowchart in
 layers by Sugiyama's method (cycles broken, ranks by longest path, crossings reduced by barycentres, positions
 balanced), each edge's label given its own place in the rank between, clusters drawn around what they hold; a
-sequence diagram with its notes and frames (loop, alt, opt, par). A diagram comes back as paths and words, or as SVG
+sequence diagram with its notes and frames (loop, alt, opt, par); a mind map with its root in the middle and
+its branches to either side. A diagram comes back as paths and words, or as SVG
 in the colour of the text around it. A kind not laid out is left for the client to show as written.
 
 ## Layout
