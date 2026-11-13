@@ -1,4 +1,4 @@
-import init, { math as wasmMath, read as wasmRead, Stream as WasmStream, type InitInput } from '../wasm/docstream_wasm.js';
+import init, { diagram as wasmDiagram, math as wasmMath, read as wasmRead, Stream as WasmStream, type InitInput } from '../wasm/docstream_wasm.js';
 import type { Block, Update } from './types.js';
 export type * from './types.js';
 
@@ -26,3 +26,6 @@ export class Stream {
 
 /** TeX typeset as SVG sized in ems, in the colour of the text around it; `display` for a formula on its own line. */
 export function math(tex: string, display = false): string { return wasmMath(tex, display); }
+
+/** A Mermaid diagram as SVG in the colour of the text around it, or undefined for a kind not laid out. */
+export function diagram(source: string): string | undefined { return wasmDiagram(source); }

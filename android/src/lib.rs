@@ -1,5 +1,5 @@
 //! docstream for Android (and any JVM): the same reader, its tree handed over as JSON through UniFFI, and the same
-//! typesetter, its formulas as glyph outlines, rules and words to draw.
+//! typesetter and diagram layout, their drawings as paths, rules and words.
 use std::sync::Mutex;
 
 uniffi::setup_scaffolding!();
@@ -11,6 +11,10 @@ pub fn read(text: String) -> String { serde_json::to_string(&docstream_core::rea
 /// TeX typeset, as the JSON of what to draw (docstream_math::Formula); `display` for a formula on its own line.
 #[uniffi::export]
 pub fn math(tex: String, display: bool) -> String { docstream_math::json(&tex, display) }
+
+/// A Mermaid diagram, as the JSON of what to draw (docstream_diagram::Diagram), or nothing for a kind not laid out.
+#[uniffi::export]
+pub fn diagram(source: String) -> Option<String> { docstream_diagram::json(&source) }
 
 /// Text as it streams in; each call gives the whole document as it now stands, as JSON.
 #[derive(uniffi::Object)]

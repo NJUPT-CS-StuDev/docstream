@@ -1,0 +1,1332 @@
+[
+  {
+    "x": -82.9,
+    "y": -4.0,
+    "width": 190.0,
+    "height": 348.2,
+    "items": [
+      {
+        "type": "path",
+        "d": "M15.5 37.6C15.5 47.6 15.5 47.6 15.5 57.6C15.5 67.6 15.6 67.6 15.6 77.6",
+        "fill": "none",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M15.6 77.6L11.1 68.6L15.6 71.1L20.1 68.6Z",
+        "fill": "solid",
+        "stroke": 0.0,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M15.6 147C15.6 157 -10.7 157 -10.7 167M-10.7 190.6C-10.7 200.6 -36.9 200.6 -36.9 210.6",
+        "fill": "none",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M-36.9 210.6L-41.4 201.6L-36.9 204.1L-32.4 201.6Z",
+        "fill": "solid",
+        "stroke": 0.0,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": -10.7,
+        "y": 178.8,
+        "text": "是",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M15.6 147C15.6 157 41.8 157 41.8 167M41.8 190.6C41.8 200.6 68.1 200.6 68.1 210.6",
+        "fill": "none",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M68.1 210.6L63.6 201.6L68.1 204.1L72.6 201.6Z",
+        "fill": "solid",
+        "stroke": 0.0,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 41.8,
+        "y": 178.8,
+        "text": "否",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M68.1 248.2C68.1 258.2 48 258.2 41.8 268.2C35.6 278.2 15.6 278.2 15.6 288.2",
+        "fill": "none",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M15.6 288.2L11.1 279.2L15.6 281.7L20.1 279.2Z",
+        "fill": "solid",
+        "stroke": 0.0,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M-36.9 248.2C-36.9 258.2 -16.9 258.2 -10.7 268.2C-4.5 278.2 15.6 278.2 15.6 288.2",
+        "fill": "none",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M15.6 288.2L11.1 279.2L15.6 281.7L20.1 279.2Z",
+        "fill": "solid",
+        "stroke": 0.0,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M-9.5 0L40.5 0A3 3 0 0 1 43.5 3L43.5 34.6A3 3 0 0 1 40.5 37.6L-9.5 37.6A3 3 0 0 1 -12.5 34.6L-12.5 3A3 3 0 0 1 -9.5 0Z",
+        "fill": "soft",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 15.5,
+        "y": 18.8,
+        "text": "开始",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M15.6 77.6L75 112.3L15.6 147L-43.9 112.3Z",
+        "fill": "soft",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 15.6,
+        "y": 112.3,
+        "text": "是否登录?",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M-75.9 210.6L2.1 210.6A3 3 0 0 1 5.1 213.6L5.1 245.2A3 3 0 0 1 2.1 248.2L-75.9 248.2A3 3 0 0 1 -78.9 245.2L-78.9 213.6A3 3 0 0 1 -75.9 210.6Z",
+        "fill": "soft",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": -36.9,
+        "y": 229.4,
+        "text": "进入课表",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M36.1 210.6L100.1 210.6A3 3 0 0 1 103.1 213.6L103.1 245.2A3 3 0 0 1 100.1 248.2L36.1 248.2A3 3 0 0 1 33.1 245.2L33.1 213.6A3 3 0 0 1 36.1 210.6Z",
+        "fill": "soft",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 68.1,
+        "y": 229.4,
+        "text": "登录页",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M-10.4 314.2A26 26 0 0 1 41.6 314.2A26 26 0 0 1 -10.4 314.2Z",
+        "fill": "soft",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 15.6,
+        "y": 314.2,
+        "text": "完成",
+        "size": 14.0,
+        "bold": false
+      }
+    ]
+  },
+  {
+    "x": -4.0,
+    "y": -71.0,
+    "width": 632.8,
+    "height": 111.2,
+    "items": [
+      {
+        "type": "path",
+        "d": "M99.6 -8.8C109.6 -8.8 109.6 -8.6 119.6 -8.8C129.6 -9 129.6 -10.9 139.6 -10.9",
+        "fill": "none",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M139.6 -10.9L130.6 -6.4L133.1 -10.9L130.6 -15.4Z",
+        "fill": "solid",
+        "stroke": 0.0,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M223.6 -10.9C233.6 -10.9 233.6 -26 243.6 -28.8C258.5 -33 258.5 -48.2 273.4 -48.2",
+        "fill": "none",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M273.4 -48.2L264.4 -43.7L266.9 -48.2L264.4 -52.7Z",
+        "fill": "solid",
+        "stroke": 0.0,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M223.6 -10.9C233.6 -10.9 233.6 1.9 243.6 4C253.6 6.1 253.6 17.4 263.6 17.4",
+        "fill": "none",
+        "stroke": 1.4,
+        "dash": true
+      },
+      {
+        "type": "path",
+        "d": "M263.6 17.4L254.6 21.9L257.1 17.4L254.6 12.9Z",
+        "fill": "solid",
+        "stroke": 0.0,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M357.4 -48.2C372.3 -48.2 372.3 -44.8 387.2 -44C397.2 -43.4 397.2 -40.3 407.2 -40.3",
+        "fill": "none",
+        "stroke": 2.6,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M407.2 -40.3L398.2 -35.8L400.7 -40.3L398.2 -44.8Z",
+        "fill": "solid",
+        "stroke": 0.0,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M491.2 -40.3C501.2 -40.3 501.2 -38.1 511.2 -37.8C521.2 -37.5 521.2 -36.6 531.2 -36.6",
+        "fill": "none",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M18.8 -27.6L80.8 -27.6A18.8 18.8 0 0 1 99.6 -8.8L99.6 -8.8A18.8 18.8 0 0 1 80.8 10L18.8 10A18.8 18.8 0 0 1 0 -8.8L0 -8.8A18.8 18.8 0 0 1 18.8 -27.6Z",
+        "fill": "soft",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 49.8,
+        "y": -8.8,
+        "text": "用户输入",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M142.6 -29.7L220.6 -29.7A3 3 0 0 1 223.6 -26.7L223.6 4.9A3 3 0 0 1 220.6 7.9L142.6 7.9A3 3 0 0 1 139.6 4.9L139.6 -26.7A3 3 0 0 1 142.6 -29.7Z",
+        "fill": "soft",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 181.6,
+        "y": -10.9,
+        "text": "解析时间",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M273.4 -67L357.4 -67L357.4 -29.4L273.4 -29.4Z",
+        "fill": "soft",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M281.4 -67L281.4 -29.4M349.4 -67L349.4 -29.4",
+        "fill": "none",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 315.4,
+        "y": -48.2,
+        "text": "安排计划",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M263.6 -1.4L367.2 -1.4L367.2 36.2L263.6 36.2L282.4 17.4Z",
+        "fill": "soft",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 315.4,
+        "y": 17.4,
+        "text": "出错提示",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M407.2 -58.1A42 7 0 0 1 491.2 -58.1L491.2 -22.5A42 7 0 0 1 407.2 -22.5Z",
+        "fill": "soft",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M407.2 -58.1A42 7 0 0 0 491.2 -58.1",
+        "fill": "none",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 449.2,
+        "y": -35.3,
+        "text": "本地存储",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M550 -55.4L606 -55.4L624.8 -36.6L606 -17.8L550 -17.8L531.2 -36.6Z",
+        "fill": "soft",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 578.0,
+        "y": -36.6,
+        "text": "云同步",
+        "size": 14.0,
+        "bold": false
+      }
+    ]
+  },
+  {
+    "x": 54.9,
+    "y": -4.0,
+    "width": 172.0,
+    "height": 232.4,
+    "items": [
+      {
+        "type": "path",
+        "d": "M172.3 37.6C172.3 47.6 157 47.6 153.7 57.6C150.4 67.6 146.7 67.6 146.7 77.6",
+        "fill": "none",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M146.7 77.6L142.2 68.6L146.7 71.1L151.2 68.6Z",
+        "fill": "solid",
+        "stroke": 0.0,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M146.7 115.2C146.7 131.1 139 131.1 147.2 147C155.4 162.9 198.9 162.9 198.9 178.8",
+        "fill": "none",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M198.9 178.8L194.4 169.8L198.9 172.3L203.4 169.8Z",
+        "fill": "solid",
+        "stroke": 0.0,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M172.3 37.6C172.3 47.6 187.5 47.6 190.8 57.6C197.4 77 193.1 77 198.4 96.4C205.3 121.7 215 121.7 215.2 147C215.2 162.9 198.9 162.9 198.9 178.8",
+        "fill": "none",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M172.3 37.6L176.8 46.6L172.3 44.1L167.8 46.6Z",
+        "fill": "solid",
+        "stroke": 0.0,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M146.7 115.2C146.7 131.1 120.5 131.1 110.5 147C100.4 162.9 82.9 162.9 82.9 178.8",
+        "fill": "none",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M82.9 178.8L78.4 169.8L82.9 172.3L87.4 169.8Z",
+        "fill": "solid",
+        "stroke": 0.0,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M146.7 115.2C146.7 125.2 181.2 125.2 181.2 135.2M181.2 158.8C181.2 168.8 198.9 168.8 198.9 178.8",
+        "fill": "none",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M146.7 115.2L151.2 124.2L146.7 121.7L142.2 124.2Z",
+        "fill": "solid",
+        "stroke": 0.0,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 181.2,
+        "y": 147.0,
+        "text": "重试",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M106.9 188.2C142.9 170.8 142.9 224.4 106.9 207",
+        "fill": "none",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M106.9 207L117 206.9L112.8 209.8L113 215Z",
+        "fill": "solid",
+        "stroke": 0.0,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 140.9,
+        "y": 197.6,
+        "text": "",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M151.3 0L193.3 0A3 3 0 0 1 196.3 3L196.3 34.6A3 3 0 0 1 193.3 37.6L151.3 37.6A3 3 0 0 1 148.3 34.6L148.3 3A3 3 0 0 1 151.3 0Z",
+        "fill": "soft",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 172.3,
+        "y": 18.8,
+        "text": "A",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M125.7 77.6L167.7 77.6A3 3 0 0 1 170.7 80.6L170.7 112.2A3 3 0 0 1 167.7 115.2L125.7 115.2A3 3 0 0 1 122.7 112.2L122.7 80.6A3 3 0 0 1 125.7 77.6Z",
+        "fill": "soft",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 146.7,
+        "y": 96.4,
+        "text": "B",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M177.9 178.8L219.9 178.8A3 3 0 0 1 222.9 181.8L222.9 213.4A3 3 0 0 1 219.9 216.4L177.9 216.4A3 3 0 0 1 174.9 213.4L174.9 181.8A3 3 0 0 1 177.9 178.8Z",
+        "fill": "soft",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 198.9,
+        "y": 197.6,
+        "text": "C",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M61.9 178.8L103.9 178.8A3 3 0 0 1 106.9 181.8L106.9 213.4A3 3 0 0 1 103.9 216.4L61.9 216.4A3 3 0 0 1 58.9 213.4L58.9 181.8A3 3 0 0 1 61.9 178.8Z",
+        "fill": "soft",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 82.9,
+        "y": 197.6,
+        "text": "D",
+        "size": 14.0,
+        "bold": false
+      }
+    ]
+  },
+  {
+    "x": -84.4,
+    "y": -41.6,
+    "width": 172.1,
+    "height": 304.0,
+    "items": [
+      {
+        "type": "path",
+        "d": "M-72.4 -37.6L75.7 -37.6A8 8 0 0 1 83.7 -29.6L83.7 43.6A8 8 0 0 1 75.7 51.6L-72.4 51.6A8 8 0 0 1 -80.4 43.6L-80.4 -29.6A8 8 0 0 1 -72.4 -37.6Z",
+        "fill": "soft",
+        "stroke": 1.0,
+        "dash": true
+      },
+      {
+        "type": "text",
+        "x": -49.4,
+        "y": -19.8,
+        "text": "客户端",
+        "size": 14.0,
+        "bold": true
+      },
+      {
+        "type": "path",
+        "d": "M-51 91.6L56.2 91.6A8 8 0 0 1 64.2 99.6L64.2 172.8A8 8 0 0 1 56.2 180.8L-51 180.8A8 8 0 0 1 -59 172.8L-59 99.6A8 8 0 0 1 -51 91.6Z",
+        "fill": "soft",
+        "stroke": 1.0,
+        "dash": true
+      },
+      {
+        "type": "text",
+        "x": -35.0,
+        "y": 109.4,
+        "text": "内核",
+        "size": 14.0,
+        "bold": true
+      },
+      {
+        "type": "path",
+        "d": "M-38.4 37.6C-38.4 54.6 -23.3 54.6 -17.9 71.6C-8.8 100.4 2.6 100.4 2.6 129.2",
+        "fill": "none",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M2.6 129.2L-1.9 120.2L2.6 122.7L7.1 120.2Z",
+        "fill": "solid",
+        "stroke": 0.0,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M43.6 37.6C43.6 54.6 28.5 54.6 23.1 71.6C14 100.4 2.6 100.4 2.6 129.2",
+        "fill": "none",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M2.6 129.2L-1.9 120.2L2.6 122.7L7.1 120.2Z",
+        "fill": "solid",
+        "stroke": 0.0,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M2.6 166.8C2.6 183.8 2.6 183.8 2.6 200.8C2.6 210.8 2.6 210.8 2.6 220.8",
+        "fill": "none",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M2.6 220.8L-1.9 211.8L2.6 214.3L7.1 211.8Z",
+        "fill": "solid",
+        "stroke": 0.0,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M-63.4 0L-13.4 0A3 3 0 0 1 -10.4 3L-10.4 34.6A3 3 0 0 1 -13.4 37.6L-63.4 37.6A3 3 0 0 1 -66.4 34.6L-66.4 3A3 3 0 0 1 -63.4 0Z",
+        "fill": "soft",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": -38.4,
+        "y": 18.8,
+        "text": "网页",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M20.6 0L66.7 0A3 3 0 0 1 69.7 3L69.7 34.6A3 3 0 0 1 66.7 37.6L20.6 37.6A3 3 0 0 1 17.6 34.6L17.6 3A3 3 0 0 1 20.6 0Z",
+        "fill": "soft",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 43.6,
+        "y": 18.8,
+        "text": "App",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M-42 129.2L47.2 129.2A3 3 0 0 1 50.2 132.2L50.2 163.8A3 3 0 0 1 47.2 166.8L-42 166.8A3 3 0 0 1 -45 163.8L-45 132.2A3 3 0 0 1 -42 129.2Z",
+        "fill": "soft",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 2.6,
+        "y": 148.0,
+        "text": "docstream",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M-36.4 220.8L41.6 220.8A3 3 0 0 1 44.6 223.8L44.6 255.4A3 3 0 0 1 41.6 258.4L-36.4 258.4A3 3 0 0 1 -39.4 255.4L-39.4 223.8A3 3 0 0 1 -36.4 220.8Z",
+        "fill": "soft",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 2.6,
+        "y": 239.6,
+        "text": "同一棵树",
+        "size": 14.0,
+        "bold": false
+      }
+    ]
+  },
+  {
+    "x": -46.4,
+    "y": -4.0,
+    "width": 108.0,
+    "height": 364.0,
+    "items": [
+      {
+        "type": "path",
+        "d": "M7.7 18C7.7 28 7.8 28 7.7 38C7.7 48 7.7 48 7.7 58",
+        "fill": "none",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M7.7 58L3.2 49L7.7 51.5L12.2 49Z",
+        "fill": "solid",
+        "stroke": 0.0,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M7.7 95.6C7.7 105.6 -24.4 105.6 -24.4 115.6M-24.4 139.2C-24.4 149.2 7.6 149.2 7.6 159.2",
+        "fill": "none",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M7.6 159.2L3.1 150.2L7.6 152.7L12.1 150.2Z",
+        "fill": "solid",
+        "stroke": 0.0,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": -24.4,
+        "y": 127.4,
+        "text": "开始",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M7.6 196.8C7.6 206.8 7.4 206.8 7.4 216.8M7.4 240.4C7.4 250.4 7.3 250.4 7.3 260.4",
+        "fill": "none",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M7.3 260.4L2.8 251.4L7.3 253.9L11.8 251.4Z",
+        "fill": "solid",
+        "stroke": 0.0,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 7.4,
+        "y": 228.6,
+        "text": "完成",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M7.7 95.6C7.7 105.6 39.6 105.6 39.6 115.6M39.6 139.2C39.6 149.2 7.6 149.2 7.6 159.2",
+        "fill": "none",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M7.7 95.6L12.2 104.6L7.7 102.1L3.2 104.6Z",
+        "fill": "solid",
+        "stroke": 0.0,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 39.6,
+        "y": 127.4,
+        "text": "搁置",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M7.3 298C7.3 308 7.2 308 7.2 318C7.2 328 7.1 328 7.1 338",
+        "fill": "none",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M7.1 338L2.6 329L7.1 331.5L11.6 329Z",
+        "fill": "solid",
+        "stroke": 0.0,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M-0.3 9A8 8 0 0 1 15.7 9A8 8 0 0 1 -0.3 9Z",
+        "fill": "solid",
+        "stroke": 0.0,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M-10.3 58L25.7 58A10 10 0 0 1 35.7 68L35.7 85.6A10 10 0 0 1 25.7 95.6L-10.3 95.6A10 10 0 0 1 -20.3 85.6L-20.3 68A10 10 0 0 1 -10.3 58Z",
+        "fill": "soft",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 7.7,
+        "y": 76.8,
+        "text": "待办",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M-17.4 159.2L32.6 159.2A10 10 0 0 1 42.6 169.2L42.6 186.8A10 10 0 0 1 32.6 196.8L-17.4 196.8A10 10 0 0 1 -27.4 186.8L-27.4 169.2A10 10 0 0 1 -17.4 159.2Z",
+        "fill": "soft",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 7.6,
+        "y": 178.0,
+        "text": "进行中",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M-17.7 260.4L32.3 260.4A10 10 0 0 1 42.3 270.4L42.3 288A10 10 0 0 1 32.3 298L-17.7 298A10 10 0 0 1 -27.7 288L-27.7 270.4A10 10 0 0 1 -17.7 260.4Z",
+        "fill": "soft",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 7.3,
+        "y": 279.2,
+        "text": "已完成",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M-1.9 347A9 9 0 0 1 16.1 347A9 9 0 0 1 -1.9 347Z",
+        "fill": "none",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M1.6 347A5.5 5.5 0 0 1 12.6 347A5.5 5.5 0 0 1 1.6 347Z",
+        "fill": "solid",
+        "stroke": 0.0,
+        "dash": false
+      }
+    ]
+  },
+  {
+    "x": -4.0,
+    "y": -4.0,
+    "width": 398.0,
+    "height": 603.2,
+    "items": [
+      {
+        "type": "path",
+        "d": "M335 55.6L335 539.6",
+        "fill": "none",
+        "stroke": 1.0,
+        "dash": true
+      },
+      {
+        "type": "path",
+        "d": "M162 55.6L162 539.6",
+        "fill": "none",
+        "stroke": 1.0,
+        "dash": true
+      },
+      {
+        "type": "path",
+        "d": "M42 55.6L42 539.6",
+        "fill": "none",
+        "stroke": 1.0,
+        "dash": true
+      },
+      {
+        "type": "path",
+        "d": "M118 382.8L281.1 382.8A4 4 0 0 1 285.1 386.8L285.1 482A4 4 0 0 1 281.1 486L118 486A4 4 0 0 1 114 482L114 386.8A4 4 0 0 1 118 382.8Z",
+        "fill": "none",
+        "stroke": 1.0,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M118 164.8L386 164.8A4 4 0 0 1 390 168.8L390 325.2A4 4 0 0 1 386 329.2L118 329.2A4 4 0 0 1 114 325.2L114 168.8A4 4 0 0 1 118 164.8Z",
+        "fill": "none",
+        "stroke": 1.0,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 102.0,
+        "y": 83.4,
+        "text": "1. 打开课表",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M42 99.2L161 99.2",
+        "fill": "none",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M161 99.2L152 103.7L154.5 99.2L152 94.7Z",
+        "fill": "solid",
+        "stroke": 0.0,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 248.5,
+        "y": 129.0,
+        "text": "2. 请求本周课程",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M162 144.8L334 144.8",
+        "fill": "none",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M334 144.8L325 149.3L327.5 144.8L325 140.3Z",
+        "fill": "solid",
+        "stroke": 0.0,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 248.5,
+        "y": 210.2,
+        "text": "3. 课程列表",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M335 226L163 226",
+        "fill": "none",
+        "stroke": 1.4,
+        "dash": true
+      },
+      {
+        "type": "path",
+        "d": "M163 226L172 221.5L169.5 226L172 230.5Z",
+        "fill": "solid",
+        "stroke": 0.0,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 248.5,
+        "y": 289.4,
+        "text": "4. 需要登录",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M335 305.2L163 305.2",
+        "fill": "none",
+        "stroke": 1.4,
+        "dash": true
+      },
+      {
+        "type": "path",
+        "d": "M164 300.2L174 310.2M174 300.2L164 310.2",
+        "fill": "none",
+        "stroke": 1.6,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M172 337.2L268 337.2L276 345.2L276 368.8L172 368.8Z",
+        "fill": "soft",
+        "stroke": 1.2,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M268 337.2L268 345.2L276 345.2",
+        "fill": "none",
+        "stroke": 1.2,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 224.0,
+        "y": 353.0,
+        "text": "本地缓存一份",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "text",
+        "x": 223.6,
+        "y": 428.2,
+        "text": "5. 提醒今日课程",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M162 442L198 442L198 464L164 464",
+        "fill": "none",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M163 464L172 459.5L169.5 464L172 468.5Z",
+        "fill": "solid",
+        "stroke": 0.0,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 102.0,
+        "y": 503.8,
+        "text": "6. 显示课表",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M162 519.6L43 519.6",
+        "fill": "none",
+        "stroke": 1.4,
+        "dash": true
+      },
+      {
+        "type": "path",
+        "d": "M43 519.6L52 515.1L49.5 519.6L52 524.1Z",
+        "fill": "solid",
+        "stroke": 0.0,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M114 164.8L143.9 164.8L143.9 178.8L137.9 184.8L114 184.8Z",
+        "fill": "soft",
+        "stroke": 1.0,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 128.96,
+        "y": 174.8,
+        "text": "alt",
+        "size": 12.0,
+        "bold": true
+      },
+      {
+        "type": "text",
+        "x": 267.0,
+        "y": 174.8,
+        "text": "[已登录]",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M114 246L390 246",
+        "fill": "none",
+        "stroke": 1.0,
+        "dash": true
+      },
+      {
+        "type": "text",
+        "x": 252.0,
+        "y": 258.0,
+        "text": "[未登录]",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M114 382.8L152.6 382.8L152.6 396.8L146.6 402.8L114 402.8Z",
+        "fill": "soft",
+        "stroke": 1.0,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 133.28,
+        "y": 392.80002,
+        "text": "loop",
+        "size": 12.0,
+        "bold": true
+      },
+      {
+        "type": "text",
+        "x": 218.8,
+        "y": 392.8,
+        "text": "[每天早上]",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M37 7A5 5 0 0 1 47 7A5 5 0 0 1 37 7Z",
+        "fill": "none",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M42 12L42 22M34 15L50 15M42 22L36 29M42 22L48 29",
+        "fill": "none",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 42.0,
+        "y": 44.8,
+        "text": "学生",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M37 546.6A5 5 0 0 1 47 546.6A5 5 0 0 1 37 546.6Z",
+        "fill": "none",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M42 551.6L42 561.6M34 554.6L50 554.6M42 561.6L36 568.6M42 561.6L48 568.6",
+        "fill": "none",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 42.0,
+        "y": 584.4,
+        "text": "学生",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M126 0L198 0A6 6 0 0 1 204 6L204 49.6A6 6 0 0 1 198 55.6L126 55.6A6 6 0 0 1 120 49.6L120 6A6 6 0 0 1 126 0Z",
+        "fill": "soft",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 162.0,
+        "y": 27.8,
+        "text": "App",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M126 539.6L198 539.6A6 6 0 0 1 204 545.6L204 589.2A6 6 0 0 1 198 595.2L126 595.2A6 6 0 0 1 120 589.2L120 545.6A6 6 0 0 1 126 539.6Z",
+        "fill": "soft",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 162.0,
+        "y": 567.4,
+        "text": "App",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M292 0L378 0A6 6 0 0 1 384 6L384 49.6A6 6 0 0 1 378 55.6L292 55.6A6 6 0 0 1 286 49.6L286 6A6 6 0 0 1 292 0Z",
+        "fill": "soft",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 335.0,
+        "y": 27.8,
+        "text": "教务服务器",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M292 539.6L378 539.6A6 6 0 0 1 384 545.6L384 589.2A6 6 0 0 1 378 595.2L292 595.2A6 6 0 0 1 286 589.2L286 545.6A6 6 0 0 1 292 539.6Z",
+        "fill": "soft",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 335.0,
+        "y": 567.4,
+        "text": "教务服务器",
+        "size": 14.0,
+        "bold": false
+      }
+    ]
+  },
+  {
+    "x": -4.0,
+    "y": -4.0,
+    "width": 276.0,
+    "height": 234.0,
+    "items": [
+      {
+        "type": "path",
+        "d": "M226 35.6L226 190.4",
+        "fill": "none",
+        "stroke": 1.0,
+        "dash": true
+      },
+      {
+        "type": "path",
+        "d": "M42 35.6L42 190.4",
+        "fill": "none",
+        "stroke": 1.0,
+        "dash": true
+      },
+      {
+        "type": "text",
+        "x": 134.0,
+        "y": 63.4,
+        "text": "Hello Bob, how are you?",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M42 79.2L225 79.2",
+        "fill": "none",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M225 79.2L216 83.7L218.5 79.2L216 74.7Z",
+        "fill": "solid",
+        "stroke": 0.0,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M22 99.2L238 99.2L246 107.2L246 130.8L22 130.8Z",
+        "fill": "soft",
+        "stroke": 1.2,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M238 99.2L238 107.2L246 107.2",
+        "fill": "none",
+        "stroke": 1.2,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 134.0,
+        "y": 115.0,
+        "text": "A typical interaction",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "text",
+        "x": 134.0,
+        "y": 154.6,
+        "text": "Fine, thanks",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M226 170.4L43 170.4",
+        "fill": "none",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M52 165.4L43 170.4L52 175.4",
+        "fill": "none",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M6 0L78 0A6 6 0 0 1 84 6L84 29.6A6 6 0 0 1 78 35.6L6 35.6A6 6 0 0 1 0 29.6L0 6A6 6 0 0 1 6 0Z",
+        "fill": "soft",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 42.0,
+        "y": 17.8,
+        "text": "Alice",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M6 190.4L78 190.4A6 6 0 0 1 84 196.4L84 220A6 6 0 0 1 78 226L6 226A6 6 0 0 1 0 220L0 196.4A6 6 0 0 1 6 190.4Z",
+        "fill": "soft",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 42.0,
+        "y": 208.2,
+        "text": "Alice",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M190 0L262 0A6 6 0 0 1 268 6L268 29.6A6 6 0 0 1 262 35.6L190 35.6A6 6 0 0 1 184 29.6L184 6A6 6 0 0 1 190 0Z",
+        "fill": "soft",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 226.0,
+        "y": 17.8,
+        "text": "Bob",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M190 190.4L262 190.4A6 6 0 0 1 268 196.4L268 220A6 6 0 0 1 262 226L190 226A6 6 0 0 1 184 220L184 196.4A6 6 0 0 1 190 190.4Z",
+        "fill": "soft",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 226.0,
+        "y": 208.2,
+        "text": "Bob",
+        "size": 14.0,
+        "bold": false
+      }
+    ]
+  }
+]

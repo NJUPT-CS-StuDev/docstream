@@ -1,4 +1,5 @@
-//! docstream for the web: the same reader, its tree handed over as JSON, and the same typesetter, its formulas as SVG.
+//! docstream for the web: the same reader, its tree handed over as JSON, the same typesetter and
+//! diagram layout, their drawings as SVG.
 use wasm_bindgen::prelude::*;
 
 /// A whole document, read at once, as the JSON of its blocks.
@@ -8,6 +9,10 @@ pub fn read(text: &str) -> String { serde_json::to_string(&docstream_core::read(
 /// TeX typeset as SVG sized in ems, in the colour of the text around it; `display` for a formula on its own line.
 #[wasm_bindgen]
 pub fn math(tex: &str, display: bool) -> String { docstream_math::svg(tex, display) }
+
+/// A Mermaid diagram as SVG in the colour of the text around it, or nothing for a kind not laid out.
+#[wasm_bindgen]
+pub fn diagram(source: &str) -> Option<String> { docstream_diagram::svg(source) }
 
 /// Text as it streams in; each call gives the whole document as it now stands, as JSON.
 #[wasm_bindgen]

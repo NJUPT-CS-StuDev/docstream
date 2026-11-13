@@ -183,6 +183,7 @@ name = "docstream-android"
 version = "0.1.0"
 dependencies = [
  "docstream-core",
+ "docstream-diagram",
  "docstream-math",
  "serde_json",
  "uniffi",
@@ -193,6 +194,14 @@ name = "docstream-core"
 version = "0.1.0"
 dependencies = [
  "pulldown-cmark",
+ "serde",
+ "serde_json",
+]
+
+[[package]]
+name = "docstream-diagram"
+version = "0.1.0"
+dependencies = [
  "serde",
  "serde_json",
 ]
@@ -211,6 +220,7 @@ name = "docstream-wasm"
 version = "0.1.0"
 dependencies = [
  "docstream-core",
+ "docstream-diagram",
  "docstream-math",
  "serde_json",
  "wasm-bindgen",
