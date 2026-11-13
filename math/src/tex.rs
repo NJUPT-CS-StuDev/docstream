@@ -31,6 +31,16 @@ pub enum Node {
     Over { base: Box<Node>, under: bool },
     /// Rows of cells: matrices, cases, aligned equations.
     Array { rows: Vec<Vec<Node>>, align: Vec<char>, open: Option<char>, close: Option<char>, gap: f32 },
+    /// Something set over and/or under a base, centred (\overset, \underset, \stackrel, \substack's rows).
+    Stack { base: Box<Node>, over: Option<Box<Node>>, under: Option<Box<Node>>, class: Class },
+    /// A brace grown over or under what it spans; a script after it is set above or below (\overbrace, \underbrace).
+    Brace { body: Box<Node>, under: bool },
+    /// An arrow grown to hold the words over and under it (\xrightarrow).
+    Arrow { symbol: char, over: Option<Box<Node>>, under: Option<Box<Node>> },
+    /// What it holds, in a frame.
+    Boxed(Box<Node>),
+    /// The room what it holds would take, empty.
+    Phantom(Box<Node>),
     /// Space in ems.
     Space(f32),
     Style(StyleChange, Box<Node>),
@@ -69,6 +79,15 @@ const SYMBOLS: &[(&str, char, Class)] = &[
     ("models", '⊨', Class::Rel), ("coloneqq", '≔', Class::Rel), ("doteq", '≐', Class::Rel), ("prec", '≺', Class::Rel), ("succ", '≻', Class::Rel),
     ("colon", ':', Class::Punct), ("lbrace", '{', Class::Open), ("rbrace", '}', Class::Close), ("langle", '⟨', Class::Open), ("rangle", '⟩', Class::Close),
     ("lfloor", '⌊', Class::Open), ("rfloor", '⌋', Class::Close), ("lceil", '⌈', Class::Open), ("rceil", '⌉', Class::Close), ("vert", '|', Class::Ord), ("Vert", '‖', Class::Ord),
+    ("Longrightarrow", '⟹', Class::Rel), ("longleftarrow", '⟵', Class::Rel), ("Longleftarrow", '⟸', Class::Rel), ("impliedby", '⟸', Class::Rel),
+    ("longleftrightarrow", '⟷', Class::Rel), ("hookrightarrow", '↪', Class::Rel), ("rightleftharpoons", '⇌', Class::Rel), ("nearrow", '↗', Class::Rel), ("searrow", '↘', Class::Rel),
+    ("leqslant", '⩽', Class::Rel), ("geqslant", '⩾', Class::Rel), ("lt", '<', Class::Rel), ("gt", '>', Class::Rel), ("nleq", '≰', Class::Rel), ("ngeq", '≱', Class::Rel),
+    ("subsetneq", '⊊', Class::Rel), ("supsetneq", '⊋', Class::Rel), ("nsubseteq", '⊈', Class::Rel), ("asymp", '≍', Class::Rel), ("preceq", '⪯', Class::Rel), ("succeq", '⪰', Class::Rel),
+    ("ominus", '⊖', Class::Bin), ("oslash", '⊘', Class::Bin), ("dagger", '†', Class::Bin), ("ddagger", '‡', Class::Bin), ("amalg", '⨿', Class::Bin), ("uplus", '⊎', Class::Bin),
+    ("sqcup", '⊔', Class::Bin), ("sqcap", '⊓', Class::Bin), ("diamond", '⋄', Class::Bin), ("wr", '≀', Class::Bin),
+    ("therefore", '∴', Class::Rel), ("because", '∵', Class::Rel), ("checkmark", '✓', Class::Ord), ("square", '□', Class::Ord), ("blacksquare", '■', Class::Ord),
+    ("lozenge", '◊', Class::Ord), ("flat", '♭', Class::Ord), ("sharp", '♯', Class::Ord), ("natural", '♮', Class::Ord), ("complement", '∁', Class::Ord), ("wp", '℘', Class::Ord), ("mho", '℧', Class::Ord),
+    ("lvert", '|', Class::Open), ("rvert", '|', Class::Close), ("lVert", '‖', Class::Open), ("rVert", '‖', Class::Close),
     ("backslash", '\\', Class::Ord), ("%", '%', Class::Ord), ("$", '$', Class::Ord), ("#", '#', Class::Ord), ("&", '&', Class::Ord), ("_", '_', Class::Ord),
 ];
 const LARGE: &[(&str, char, bool)] = &[
@@ -79,12 +98,12 @@ const NAMES: &[(&str, bool)] = &[
     ("lim", true), ("limsup", true), ("liminf", true), ("max", true), ("min", true), ("sup", true), ("inf", true), ("det", true), ("gcd", true), ("Pr", true),
     ("sin", false), ("cos", false), ("tan", false), ("cot", false), ("sec", false), ("csc", false), ("arcsin", false), ("arccos", false), ("arctan", false),
     ("sinh", false), ("cosh", false), ("tanh", false), ("log", false), ("ln", false), ("lg", false), ("exp", false), ("arg", false), ("deg", false), ("dim", false),
-    ("ker", false), ("hom", false), ("mod", false),
+    ("ker", false), ("hom", false), ("mod", false), ("argmax", true), ("argmin", true), ("Tr", false), ("tr", false), ("rank", false), ("sgn", false), ("lcm", false),
 ];
 const ACCENTS: &[(&str, char, bool)] = &[
     ("hat", '\u{302}', false), ("widehat", '\u{302}', true), ("check", '\u{30C}', false), ("tilde", '\u{303}', false), ("widetilde", '\u{303}', true),
     ("bar", '\u{304}', false), ("vec", '\u{20D7}', false), ("dot", '\u{307}', false), ("ddot", '\u{308}', false), ("acute", '\u{301}', false), ("grave", '\u{300}', false),
-    ("breve", '\u{306}', false), ("overrightarrow", '→', true), ("overleftarrow", '←', true),
+    ("breve", '\u{306}', false), ("mathring", '\u{30A}', false), ("overrightarrow", '→', true), ("overleftarrow", '←', true),
 ];
 
 fn class_of(c: char) -> Class {
@@ -228,6 +247,47 @@ impl Parser {
                 let face = match name.as_str() { "mathrm" => Face::Upright, "mathit" => Face::Italic, "mathbf" | "boldsymbol" | "bm" => Face::Bold, "mathbb" => Face::DoubleStruck, "mathcal" | "mathscr" => Face::Script, "mathfrak" => Face::Fraktur, "mathsf" => Face::SansSerif, _ => Face::Mono };
                 restyle(self.argument(), face)
             }
+            "overset" | "stackrel" => { let over = self.argument(); let base = self.argument(); Node::Stack { base: Box::new(base), over: Some(Box::new(over)), under: None, class: Class::Rel } }
+            "underset" => { let under = self.argument(); let base = self.argument(); Node::Stack { base: Box::new(base), over: None, under: Some(Box::new(under)), class: Class::Rel } }
+            "overbrace" | "underbrace" => Node::Brace { body: Box::new(self.argument()), under: name == "underbrace" },
+            "xrightarrow" | "xleftarrow" | "xRightarrow" | "xLeftarrow" | "xleftrightarrow" | "xmapsto" => {
+                let under = self.optional();
+                let over = self.argument();
+                let symbol = match name.as_str() { "xrightarrow" => '→', "xleftarrow" => '←', "xRightarrow" => '⇒', "xLeftarrow" => '⇐', "xleftrightarrow" => '↔', _ => '↦' };
+                Node::Arrow { symbol, over: Some(Box::new(over)), under: under.map(Box::new) }
+            }
+            "substack" => {
+                self.skip_space();
+                if self.peek() == Some('{') { self.at += 1; }
+                let mut rows = Vec::new();
+                loop {
+                    rows.push(vec![group(self.list(Some(&["\\\\"])))]);
+                    if self.ahead("\\\\") { self.at += 2; } else { if self.peek() == Some('}') { self.at += 1; } break; }
+                }
+                Node::Array { rows, align: vec!['c'], open: None, close: None, gap: 0.0 }
+            }
+            "boxed" | "fbox" => Node::Boxed(Box::new(self.argument())),
+            "phantom" | "hphantom" | "vphantom" => Node::Phantom(Box::new(self.argument())),
+            "color" => { self.braced_text(); Node::Group(vec![]) }
+            "textcolor" | "colorbox" => { self.braced_text(); self.argument() }
+            "cancel" | "bcancel" | "xcancel" | "smash" | "mathstrut" | "displaylimits" => if name == "mathstrut" || name == "displaylimits" { Node::Group(vec![]) } else { self.argument() },
+            "bmod" => Node::Text { text: "mod".into(), class: Class::Bin },
+            "pmod" | "pod" => {
+                let inner = self.argument();
+                let mut list = vec![Node::Space(if name == "pmod" { 1.0 } else { 0.444 }), Node::Symbol { text: "(".into(), class: Class::Open, face: Face::Upright }];
+                if name == "pmod" { list.push(Node::Text { text: "mod".into(), class: Class::Ord }); list.push(Node::Space(0.333)); }
+                list.push(inner);
+                list.push(Node::Symbol { text: ")".into(), class: Class::Close, face: Face::Upright });
+                Node::Group(list)
+            }
+            "not" => {
+                // A negated relation, as Unicode writes it; anything else struck by a slash.
+                let next = self.atom().unwrap_or(Node::Group(vec![]));
+                let negated = match &next { Node::Symbol { text, .. } => match text.as_str() { "=" => Some('≠'), "∈" => Some('∉'), "⊂" => Some('⊄'), "⊃" => Some('⊅'), "⊆" => Some('⊈'), "⊇" => Some('⊉'), "≡" => Some('≢'), "<" => Some('≮'), ">" => Some('≯'), "≤" => Some('≰'), "≥" => Some('≱'), "∼" => Some('≁'), "≈" => Some('≉'), "∣" => Some('∤'), "∥" => Some('∦'), "∃" => Some('∄'), _ => None }, _ => None };
+                match negated { Some(c) => Node::Symbol { text: c.to_string(), class: Class::Rel, face: Face::Upright }, None => Node::Group(vec![Node::Symbol { text: "/".into(), class: Class::Ord, face: Face::Upright }, Node::Space(-0.5), next]) }
+            }
+            "middle" => { let d = self.delimiter().unwrap_or('|'); Node::Symbol { text: d.to_string(), class: Class::Rel, face: Face::Upright } }
+            "hline" | "hdashline" | "displaystyle_" => Node::Group(vec![]),
             "overline" => Node::Over { base: Box::new(self.argument()), under: false },
             "underline" => Node::Over { base: Box::new(self.argument()), under: true },
             "displaystyle" => Node::Style(StyleChange::Display, Box::new(group(self.list(None)))),
@@ -258,7 +318,8 @@ impl Parser {
         let (open, close, align, gap) = match name.as_str() {
             "pmatrix" => (Some('('), Some(')'), 'c', 1.0), "bmatrix" => (Some('['), Some(']'), 'c', 1.0), "Bmatrix" => (Some('{'), Some('}'), 'c', 1.0),
             "vmatrix" => (Some('|'), Some('|'), 'c', 1.0), "Vmatrix" => (Some('‖'), Some('‖'), 'c', 1.0), "cases" => (Some('{'), None, 'l', 1.0),
-            "aligned" | "align" | "align*" | "split" => (None, None, 'r', 0.0), "array" => { self.braced_text(); (None, None, 'c', 1.0) }
+            "aligned" | "align" | "align*" | "split" | "alignat" | "alignedat" => (None, None, 'r', 0.0), "matrix" | "smallmatrix" => (None, None, 'c', 1.0),
+            "gathered" | "gather" | "gather*" | "equation" | "equation*" => (None, None, 'c', 0.0), "rcases" => (None, Some('}'), 'l', 1.0), "dcases" => (Some('{'), None, 'l', 1.0), "array" => { self.braced_text(); (None, None, 'c', 1.0) }
             _ => (None, None, 'c', 1.0),
         };
         let mut rows = vec![vec![]];
@@ -272,7 +333,7 @@ impl Parser {
         if rows.last().is_some_and(|row| row.len() == 1 && matches!(&row[0], Node::Group(list) if list.is_empty())) { rows.pop(); }
         // Aligned equations alternate right and left at their &.
         let columns = rows.iter().map(Vec::len).max().unwrap_or(0);
-        let align = (0..columns).map(|i| if align == 'r' { if i % 2 == 0 { 'r' } else { 'l' } } else if name == "cases" && i > 0 { 'l' } else { align }).collect();
+        let align = (0..columns).map(|i| if align == 'r' { if i % 2 == 0 { 'r' } else { 'l' } } else if matches!(name.as_str(), "cases" | "dcases" | "rcases") && i > 0 { 'l' } else { align }).collect();
         Node::Array { rows, align, open, close, gap }
     }
 }

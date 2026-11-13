@@ -248,7 +248,10 @@ fn layout(node: &Node, st: St) -> Bx {
             let b = layout(base, st.cramp());
             let a = if *stretch { stretched_wide(*accent, b.w, size) } else { char_box(*accent, size) };
             let base_height = f.c(c.accent_base_height()) * size;
-            let lift = (b.h - base_height).max(0.0);
+            // A combining accent is drawn to sit over x-height letters, raised for taller ones; an arrow over the base
+            // is set clear above it, its ink a small gap over the base's top.
+            let combining = matches!(*accent as u32, 0x300..=0x36F | 0x20D0..=0x20FF);
+            let lift = if combining { (b.h - base_height).max(0.0) } else { b.h + 0.1 * size - ink_bottom(&a) };
             // Centred on the base's accent point, or its middle; the accent's own point, or its middle.
             let over = b.accent_at.unwrap_or(b.w / 2.0 + b.italic / 2.0);
             let own = a.accent_at.unwrap_or(a.w / 2.0);
@@ -271,6 +274,38 @@ fn layout(node: &Node, st: St) -> Bx {
             out
         }
         Node::Array { rows, align, open, close, gap } => array(rows, align, *open, *close, *gap, st),
+        Node::Stack { base, over, under, class } => {
+            let mut out = stack(layout(base, st), over.as_ref().map(|n| layout(n, st.sup())), under.as_ref().map(|n| layout(n, st.sub())), size);
+            out.class = Some(*class); out
+        }
+        Node::Brace { body, under } => {
+            let b = layout(body, st);
+            let brace = stretched_wide(if *under { '⏟' } else { '⏞' }, b.w, size);
+            let mut out = if *under { stack(b, None, Some(brace), size) } else { stack(b, Some(brace), None, size) };
+            // What is written after it, ^ or _, goes above or below it, as limits do.
+            out.class = Some(Class::Op); out.limits = true; out
+        }
+        Node::Arrow { symbol, over, under } => {
+            let (p, q) = (over.as_ref().map(|n| layout(n, st.sup())), under.as_ref().map(|n| layout(n, st.sub())));
+            let span = p.as_ref().map_or(0.0, |b| b.w).max(q.as_ref().map_or(0.0, |b| b.w)) + 0.6 * size;
+            let mut arrow = stretched_wide(*symbol, span.max(1.0 * size), size);
+            arrow.glyph = None;
+            let mut out = stack(arrow, p, q, size);
+            out.class = Some(Class::Rel); out
+        }
+        Node::Boxed(inner) => {
+            let b = layout(inner, st);
+            let (pad, t) = (0.2 * size, 0.04 * size);
+            let (w, h, d) = (b.w + 2.0 * pad, b.h + pad, b.d + pad);
+            let mut out = Bx { w, h, d, class: Some(Class::Ord), ..Bx::default() };
+            out.items.extend(b.shifted(pad, 0.0));
+            out.items.push(Item::Rule { x: 0.0, y: h, width: w, height: t });
+            out.items.push(Item::Rule { x: 0.0, y: -d + t, width: w, height: t });
+            out.items.push(Item::Rule { x: 0.0, y: h, width: t, height: h + d });
+            out.items.push(Item::Rule { x: w - t, y: h, width: t, height: h + d });
+            out
+        }
+        Node::Phantom(inner) => { let b = layout(inner, st); Bx { w: b.w, h: b.h, d: b.d, class: b.class, ..Bx::default() } }
     }
 }
 
@@ -333,43 +368,60 @@ fn variant(id: GlyphId, height: f32, vertical: bool) -> Option<GlyphId> {
     best
 }
 
-/// A delimiter or radical sign grown to at least `height` ems in all: the first variant tall enough, else built from
-/// its parts as the font's glyph assembly says, its extenders repeated until it is.
-fn stretched(c: char, height: f32, size: f32) -> Bx {
+/// How far above its baseline a box's lowest ink is.
+fn ink_bottom(b: &Bx) -> f32 {
+    let f = font();
+    b.items.iter().filter_map(|item| match item {
+        Item::Glyph { id, y, scale, .. } => f.face.glyph_bounding_box(GlyphId(*id)).map(|r| y + f.em(r.y_min) * scale),
+        Item::Rule { y, height, .. } => Some(y - height),
+        Item::Text { y, .. } => Some(*y),
+    }).fold(f32::MAX, f32::min).min(b.h)
+}
+
+/// A delimiter or radical sign grown to at least `height` ems in all, its bottom on the baseline.
+fn stretched(c: char, height: f32, size: f32) -> Bx { grown(c, height, size, true) }
+
+/// A glyph grown to at least `length` ems along its axis: the first of the font's variants long enough, else built
+/// from its parts as the font's glyph assembly says, the extenders repeated until it is. Upright it stands on the
+/// baseline; sideways it sits on it as the parts do.
+fn grown(c: char, length: f32, size: f32, vertical: bool) -> Bx {
     let f = font();
     let Some(id) = f.face.glyph_index(c) else { return char_box(c, size) };
-    let target = height / size;
-    let Some(construction) = f.table().variants.and_then(|v| v.vertical_constructions.get(id)) else { return glyph_box(id, size) };
-    for v in construction.variants { if f.em(v.advance_measurement) >= target { return glyph_box(v.variant_glyph, size); } }
-    let Some(assembly) = construction.assembly else { return construction.variants.last().map_or_else(|| glyph_box(id, size), |v| glyph_box(v.variant_glyph, size)) };
+    let target = length / size;
+    let plain = |id: GlyphId| { let mut b = glyph_box(id, size); if !vertical { b.accent_at = None; } b };
+    let Some(construction) = f.table().variants.and_then(|v| if vertical { v.vertical_constructions } else { v.horizontal_constructions }.get(id)) else { return plain(id) };
+    for v in construction.variants { if f.em(v.advance_measurement) >= target { return plain(v.variant_glyph); } }
+    let Some(assembly) = construction.assembly else { return construction.variants.last().map_or_else(|| plain(id), |v| plain(v.variant_glyph)) };
     let overlap = f.em(f.table().variants.map_or(0, |v| v.min_connector_overlap));
     let parts: Vec<math::GlyphPart> = assembly.parts.into_iter().collect();
+    let (fixed_n, ext_n) = (parts.iter().filter(|p| !p.part_flags.extender()).count(), parts.iter().filter(|p| p.part_flags.extender()).count());
     let fixed: f32 = parts.iter().filter(|p| !p.part_flags.extender()).map(|p| f.em(p.full_advance)).sum();
     let extender: f32 = parts.iter().filter(|p| p.part_flags.extender()).map(|p| f.em(p.full_advance)).sum();
+    let total = |n: usize| fixed + extender * n as f32 - overlap * (fixed_n + ext_n * n).saturating_sub(1) as f32;
     let mut repeats = 0usize;
-    let total = |n: usize| fixed + extender * n as f32 - overlap * (parts.iter().filter(|p| !p.part_flags.extender()).count() + parts.iter().filter(|p| p.part_flags.extender()).count() * n).saturating_sub(1) as f32;
     while total(repeats) < target && repeats < 64 && extender > 0.0 { repeats += 1; }
     let mut out = Bx::default();
-    let mut y = 0.0;
-    let mut width: f32 = 0.0;
+    let mut at = 0.0;
     let mut first = true;
     for part in &parts {
         for _ in 0..if part.part_flags.extender() { repeats } else { 1 } {
-            if !first { y -= overlap; }
+            if !first { at -= overlap; }
             first = false;
-            let g = glyph_box(part.glyph_id, 1.0);
-            width = width.max(g.w);
-            // Parts stack from the bottom; each glyph's own descent puts it.
-            out.items.extend(g.clone().shifted(0.0, y + g.d));
-            y += f.em(part.full_advance);
+            let g = glyph_box(part.glyph_id, size);
+            if vertical {
+                // Parts stack from the bottom; each glyph's own descent puts it.
+                out.w = out.w.max(g.w);
+                let d = g.d;
+                out.items.extend(g.shifted(0.0, at * size + d));
+            } else {
+                out.h = out.h.max(g.h); out.d = out.d.max(g.d);
+                out.items.extend(g.shifted(at * size, 0.0));
+            }
+            at += f.em(part.full_advance);
         }
     }
-    let tall = y;
-    let mut b = Bx { w: width * size, ..Bx::default() };
-    // Placed with its bottom on the baseline; the caller moves it.
-    b.items = out.items.into_iter().map(|item| match item { Item::Glyph { id, x, y, .. } => Item::Glyph { id, x: x * size, y: y * size, scale: size }, other => other }).collect();
-    b.h = tall * size; b.d = 0.0;
-    b
+    if vertical { out.h = at * size; } else { out.w = at * size; }
+    out
 }
 
 /// A delimiter grown to `height` ems, centred on the axis.
@@ -384,11 +436,25 @@ fn delimiter(c: char, height: f32, size: f32) -> Bx {
     d
 }
 
-/// An accent grown sideways to cover `width` ems, from the font's horizontal variants.
-fn stretched_wide(c: char, width: f32, size: f32) -> Bx {
-    let f = font();
-    let Some(id) = f.face.glyph_index(c) else { return char_box(c, size) };
-    match variant(id, width / size, false) { Some(v) => { let mut b = glyph_box(v, size); b.accent_at = None; b } None => glyph_box(id, size) }
+/// An accent, brace or arrow grown sideways to cover `width` ems.
+fn stretched_wide(c: char, width: f32, size: f32) -> Bx { grown(c, width, size, false) }
+
+/// `over` and `under` centred above and below `base`, at the gaps TeX keeps for limits.
+fn stack(base: Bx, over: Option<Bx>, under: Option<Bx>, size: f32) -> Bx {
+    let f = font(); let c = f.constants();
+    let w = base.w.max(over.as_ref().map_or(0.0, |b| b.w)).max(under.as_ref().map_or(0.0, |b| b.w));
+    let (bw, bh, bd) = (base.w, base.h, base.d);
+    let mut out = Bx { w, h: bh, d: bd, ..Bx::default() };
+    out.items.extend(base.shifted((w - bw) / 2.0, 0.0));
+    if let Some(p) = over {
+        let rise = bh + f.c(c.upper_limit_gap_min()) * size * 0.6 + p.d;
+        out.h = rise + p.h; let pw = p.w; out.items.extend(p.shifted((w - pw) / 2.0, rise));
+    }
+    if let Some(q) = under {
+        let drop = bd + f.c(c.lower_limit_gap_min()) * size * 0.6 + q.h;
+        out.d = drop + q.d; let qw = q.w; out.items.extend(q.shifted((w - qw) / 2.0, -drop));
+    }
+    out
 }
 
 fn array(rows: &[Vec<Node>], align: &[char], open: Option<char>, close: Option<char>, gap: f32, st: St) -> Bx {
