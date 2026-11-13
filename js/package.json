@@ -1,6 +1,6 @@
 {
   "name": "docstream",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "A document kernel: Markdown as people and models write it, read into one tree every client draws, as it streams; TeX typeset and Mermaid laid out on the device. Rust and WebAssembly",
   "license": "AGPL-3.0-only",
   "type": "module",
