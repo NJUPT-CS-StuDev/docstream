@@ -1,11 +1,18 @@
-//! Mermaid diagrams laid out on the device, the same on every client: flowcharts, state diagrams, sequence diagrams
-//! and mind maps, given back as paths and words a client draws in its own font and colours, or as SVG.
+//! Mermaid diagrams laid out on the device, the same on every client: flowcharts, state diagrams, sequence diagrams,
+//! mind maps, Gantt charts, timelines and pie charts, given back as paths and words a client draws in its own font and
+//! colours, or as SVG.
 mod draw;
 mod flow;
+mod gantt;
 mod mind;
+mod pie;
 mod sequence;
+mod timeline;
 
 pub use draw::{Diagram, Fill, Item};
+
+/// The kinds of Mermaid diagram laid out here, as their first word is written.
+pub const KINDS: [&str; 7] = ["flowchart", "sequenceDiagram", "stateDiagram", "mindmap", "gantt", "timeline", "pie"];
 
 /// A diagram from Mermaid source, or nothing when it is not a kind this lays out (the client shows the source).
 pub fn diagram(source: &str) -> Option<Diagram> {
@@ -30,6 +37,9 @@ pub fn diagram(source: &str) -> Option<Diagram> {
         "stateDiagram" | "stateDiagram-v2" => flow::states(body),
         "sequenceDiagram" => sequence::sequence(body),
         "mindmap" => mind::mindmap(raw),
+        "gantt" => gantt::gantt(body),
+        "timeline" => timeline::timeline(body),
+        "pie" => pie::pie(rest, body),
         _ => None,
     }
 }

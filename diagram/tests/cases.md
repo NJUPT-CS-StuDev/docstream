@@ -116,3 +116,54 @@ mindmap
       Embracing your stumbles
         Imperfect people are more popular
 ```
+
+```mermaid
+gantt
+    dateFormat HH:mm
+    axisFormat %H:%M
+    title 11月13日 周五
+    section 不可动
+    健身 Gym           :07:30, 90m
+    计组课/实验(同时段) :09:50, 95m
+    毛概               :13:45, 95m
+    中国文化概论        :15:35, 95m
+    Essay              :21:00, 30m
+    section 可用空档
+    空闲               :11:25, 140m
+    空闲               :17:10, 230m
+```
+
+```mermaid
+gantt
+    title 期末复习
+    dateFormat YYYY-MM-DD
+    section 数学
+    高数第一轮 :done, a1, 2026-12-01, 7d
+    高数刷题   :active, a2, after a1, 5d
+    section 专业课
+    计组复习   :crit, b1, 2026-12-05, 2026-12-15
+    计网       :b2, after b1, 4d
+    考试周     :milestone, m1, 2026-12-20, 0d
+```
+
+```mermaid
+timeline
+    title 大学四年
+    section 大一
+    2024 秋 : 入学 : 军训
+    2025 春 : 高数 : 程序设计
+    section 大二
+    2025 秋 : 计组
+            : 数据结构
+    2026 春 : 实习
+```
+
+```mermaid
+pie showData
+    title 一周时间都去哪了
+    "上课" : 22
+    "自习" : 15
+    "运动" : 6
+    "社团" : 4
+    "其他" : 3
+```

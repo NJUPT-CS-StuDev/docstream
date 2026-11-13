@@ -2180,5 +2180,939 @@
         "bold": false
       }
     ]
+  },
+  {
+    "x": -4.0,
+    "y": -4.0,
+    "width": 681.6,
+    "height": 338.4,
+    "items": [
+      {
+        "type": "text",
+        "x": 324.8,
+        "y": 9.8,
+        "text": "11月13日 周五",
+        "size": 14.0,
+        "bold": true
+      },
+      {
+        "type": "text",
+        "x": 21.0,
+        "y": 41.4,
+        "text": "不可动",
+        "size": 14.0,
+        "bold": true
+      },
+      {
+        "type": "text",
+        "x": 103.5,
+        "y": 70.2,
+        "text": "健身 Gym",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M149.6 60.2L195.6 60.2A4 4 0 0 1 199.6 64.2L199.6 76.2A4 4 0 0 1 195.6 80.2L149.6 80.2A4 4 0 0 1 145.6 76.2L145.6 64.2A4 4 0 0 1 149.6 60.2Z",
+        "fill": "soft",
+        "stroke": 1.2,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 68.8,
+        "y": 100.2,
+        "text": "计组课/实验(同时段)",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M233.6 90.2L282.6 90.2A4 4 0 0 1 286.6 94.2L286.6 106.2A4 4 0 0 1 282.6 110.2L233.6 110.2A4 4 0 0 1 229.6 106.2L229.6 94.2A4 4 0 0 1 233.6 90.2Z",
+        "fill": "soft",
+        "stroke": 1.2,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 119.6,
+        "y": 130.2,
+        "text": "毛概",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M374.6 120.2L423.6 120.2A4 4 0 0 1 427.6 124.2L427.6 136.2A4 4 0 0 1 423.6 140.2L374.6 140.2A4 4 0 0 1 370.6 136.2L370.6 124.2A4 4 0 0 1 374.6 120.2Z",
+        "fill": "soft",
+        "stroke": 1.2,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 91.6,
+        "y": 160.2,
+        "text": "中国文化概论",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M440.6 150.2L489.6 150.2A4 4 0 0 1 493.6 154.2L493.6 166.2A4 4 0 0 1 489.6 170.2L440.6 170.2A4 4 0 0 1 436.6 166.2L436.6 154.2A4 4 0 0 1 440.6 150.2Z",
+        "fill": "soft",
+        "stroke": 1.2,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 114.0,
+        "y": 190.2,
+        "text": "Essay",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M635.6 180.2L645.6 180.2A4 4 0 0 1 649.6 184.2L649.6 196.2A4 4 0 0 1 645.6 200.2L635.6 200.2A4 4 0 0 1 631.6 196.2L631.6 184.2A4 4 0 0 1 635.6 180.2Z",
+        "fill": "soft",
+        "stroke": 1.2,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 28.0,
+        "y": 221.0,
+        "text": "可用空档",
+        "size": 14.0,
+        "bold": true
+      },
+      {
+        "type": "text",
+        "x": 119.6,
+        "y": 249.8,
+        "text": "空闲",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M290.6 239.8L366.6 239.8A4 4 0 0 1 370.6 243.8L370.6 255.8A4 4 0 0 1 366.6 259.8L290.6 259.8A4 4 0 0 1 286.6 255.8L286.6 243.8A4 4 0 0 1 290.6 239.8Z",
+        "fill": "soft",
+        "stroke": 1.2,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 119.6,
+        "y": 279.8,
+        "text": "空闲",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M497.6 269.8L627.6 269.8A4 4 0 0 1 631.6 273.8L631.6 285.8A4 4 0 0 1 627.6 289.8L497.6 289.8A4 4 0 0 1 493.6 285.8L493.6 273.8A4 4 0 0 1 497.6 269.8Z",
+        "fill": "soft",
+        "stroke": 1.2,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M145.6 302.8L649.6 302.8",
+        "fill": "none",
+        "stroke": 1.0,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M163.6 29.6L163.6 306.8",
+        "fill": "none",
+        "stroke": 0.6,
+        "dash": true
+      },
+      {
+        "type": "text",
+        "x": 163.6,
+        "y": 318.6,
+        "text": "08:00",
+        "size": 12.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M235.6 29.6L235.6 306.8",
+        "fill": "none",
+        "stroke": 0.6,
+        "dash": true
+      },
+      {
+        "type": "text",
+        "x": 235.6,
+        "y": 318.6,
+        "text": "10:00",
+        "size": 12.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M307.6 29.6L307.6 306.8",
+        "fill": "none",
+        "stroke": 0.6,
+        "dash": true
+      },
+      {
+        "type": "text",
+        "x": 307.6,
+        "y": 318.6,
+        "text": "12:00",
+        "size": 12.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M379.6 29.6L379.6 306.8",
+        "fill": "none",
+        "stroke": 0.6,
+        "dash": true
+      },
+      {
+        "type": "text",
+        "x": 379.6,
+        "y": 318.6,
+        "text": "14:00",
+        "size": 12.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M451.6 29.6L451.6 306.8",
+        "fill": "none",
+        "stroke": 0.6,
+        "dash": true
+      },
+      {
+        "type": "text",
+        "x": 451.6,
+        "y": 318.6,
+        "text": "16:00",
+        "size": 12.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M523.6 29.6L523.6 306.8",
+        "fill": "none",
+        "stroke": 0.6,
+        "dash": true
+      },
+      {
+        "type": "text",
+        "x": 523.6,
+        "y": 318.6,
+        "text": "18:00",
+        "size": 12.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M595.6 29.6L595.6 306.8",
+        "fill": "none",
+        "stroke": 0.6,
+        "dash": true
+      },
+      {
+        "type": "text",
+        "x": 595.6,
+        "y": 318.6,
+        "text": "20:00",
+        "size": 12.0,
+        "bold": false
+      }
+    ]
+  },
+  {
+    "x": -4.0,
+    "y": -4.0,
+    "width": 802.0,
+    "height": 278.4,
+    "items": [
+      {
+        "type": "text",
+        "x": 385.0,
+        "y": 9.8,
+        "text": "期末复习",
+        "size": 14.0,
+        "bold": true
+      },
+      {
+        "type": "text",
+        "x": 14.0,
+        "y": 41.4,
+        "text": "数学",
+        "size": 14.0,
+        "bold": true
+      },
+      {
+        "type": "text",
+        "x": 39.0,
+        "y": 70.2,
+        "text": "高数第一轮",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M90 60.2L334 60.2A4 4 0 0 1 338 64.2L338 76.2A4 4 0 0 1 334 80.2L90 80.2A4 4 0 0 1 86 76.2L86 64.2A4 4 0 0 1 90 60.2Z",
+        "fill": "none",
+        "stroke": 1.2,
+        "dash": true
+      },
+      {
+        "type": "text",
+        "x": 46.0,
+        "y": 100.2,
+        "text": "高数刷题",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M342 90.2L514 90.2A4 4 0 0 1 518 94.2L518 106.2A4 4 0 0 1 514 110.2L342 110.2A4 4 0 0 1 338 106.2L338 94.2A4 4 0 0 1 342 90.2Z",
+        "fill": "soft",
+        "stroke": 2.0,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 21.0,
+        "y": 131.0,
+        "text": "专业课",
+        "size": 14.0,
+        "bold": true
+      },
+      {
+        "type": "text",
+        "x": 46.0,
+        "y": 159.8,
+        "text": "计组复习",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M234 149.8L586 149.8A4 4 0 0 1 590 153.8L590 165.8A4 4 0 0 1 586 169.8L234 169.8A4 4 0 0 1 230 165.8L230 153.8A4 4 0 0 1 234 149.8Z",
+        "fill": "soft",
+        "stroke": 2.4,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 60.0,
+        "y": 189.8,
+        "text": "计网",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M594 179.8L730 179.8A4 4 0 0 1 734 183.8L734 195.8A4 4 0 0 1 730 199.8L594 199.8A4 4 0 0 1 590 195.8L590 183.8A4 4 0 0 1 594 179.8Z",
+        "fill": "soft",
+        "stroke": 1.2,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 53.0,
+        "y": 219.8,
+        "text": "考试周",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M770 212.8L777 219.8L770 226.8L763 219.8Z",
+        "fill": "solid",
+        "stroke": 0.0,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M86 242.8L770 242.8",
+        "fill": "none",
+        "stroke": 1.0,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M86 29.6L86 246.8",
+        "fill": "none",
+        "stroke": 0.6,
+        "dash": true
+      },
+      {
+        "type": "text",
+        "x": 86.0,
+        "y": 258.6,
+        "text": "12-01",
+        "size": 12.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M158 29.6L158 246.8",
+        "fill": "none",
+        "stroke": 0.6,
+        "dash": true
+      },
+      {
+        "type": "text",
+        "x": 158.0,
+        "y": 258.6,
+        "text": "12-03",
+        "size": 12.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M230 29.6L230 246.8",
+        "fill": "none",
+        "stroke": 0.6,
+        "dash": true
+      },
+      {
+        "type": "text",
+        "x": 230.0,
+        "y": 258.6,
+        "text": "12-05",
+        "size": 12.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M302 29.6L302 246.8",
+        "fill": "none",
+        "stroke": 0.6,
+        "dash": true
+      },
+      {
+        "type": "text",
+        "x": 302.0,
+        "y": 258.6,
+        "text": "12-07",
+        "size": 12.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M374 29.6L374 246.8",
+        "fill": "none",
+        "stroke": 0.6,
+        "dash": true
+      },
+      {
+        "type": "text",
+        "x": 374.0,
+        "y": 258.6,
+        "text": "12-09",
+        "size": 12.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M446 29.6L446 246.8",
+        "fill": "none",
+        "stroke": 0.6,
+        "dash": true
+      },
+      {
+        "type": "text",
+        "x": 446.0,
+        "y": 258.6,
+        "text": "12-11",
+        "size": 12.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M518 29.6L518 246.8",
+        "fill": "none",
+        "stroke": 0.6,
+        "dash": true
+      },
+      {
+        "type": "text",
+        "x": 518.0,
+        "y": 258.6,
+        "text": "12-13",
+        "size": 12.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M590 29.6L590 246.8",
+        "fill": "none",
+        "stroke": 0.6,
+        "dash": true
+      },
+      {
+        "type": "text",
+        "x": 590.0,
+        "y": 258.6,
+        "text": "12-15",
+        "size": 12.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M662 29.6L662 246.8",
+        "fill": "none",
+        "stroke": 0.6,
+        "dash": true
+      },
+      {
+        "type": "text",
+        "x": 662.0,
+        "y": 258.6,
+        "text": "12-17",
+        "size": 12.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M734 29.6L734 246.8",
+        "fill": "none",
+        "stroke": 0.6,
+        "dash": true
+      },
+      {
+        "type": "text",
+        "x": 734.0,
+        "y": 258.6,
+        "text": "12-19",
+        "size": 12.0,
+        "bold": false
+      }
+    ]
+  },
+  {
+    "x": -4.0,
+    "y": -4.0,
+    "width": 446.0,
+    "height": 232.0,
+    "items": [
+      {
+        "type": "text",
+        "x": 219.0,
+        "y": 9.8,
+        "text": "大学四年",
+        "size": 14.0,
+        "bold": true
+      },
+      {
+        "type": "path",
+        "d": "M6 31.6L204 31.6A6 6 0 0 1 210 37.6L210 55.2A6 6 0 0 1 204 61.2L6 61.2A6 6 0 0 1 0 55.2L0 37.6A6 6 0 0 1 6 31.6Z",
+        "fill": "soft",
+        "stroke": 0.0,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 105.0,
+        "y": 46.4,
+        "text": "大一",
+        "size": 14.0,
+        "bold": true
+      },
+      {
+        "type": "path",
+        "d": "M234 31.6L432 31.6A6 6 0 0 1 438 37.6L438 55.2A6 6 0 0 1 432 61.2L234 61.2A6 6 0 0 1 228 55.2L228 37.6A6 6 0 0 1 234 31.6Z",
+        "fill": "soft",
+        "stroke": 0.0,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 333.0,
+        "y": 46.4,
+        "text": "大二",
+        "size": 14.0,
+        "bold": true
+      },
+      {
+        "type": "path",
+        "d": "M0 120.8L438 120.8",
+        "fill": "none",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M19.9 73.2L76.1 73.2A8 8 0 0 1 84.1 81.2L84.1 98.8A8 8 0 0 1 76.1 106.8L19.9 106.8A8 8 0 0 1 11.9 98.8L11.9 81.2A8 8 0 0 1 19.9 73.2Z",
+        "fill": "soft",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 48.0,
+        "y": 90.0,
+        "text": "2024 秋",
+        "size": 14.0,
+        "bold": true
+      },
+      {
+        "type": "path",
+        "d": "M44 120.8A4 4 0 0 1 52 120.8A4 4 0 0 1 44 120.8Z",
+        "fill": "solid",
+        "stroke": 0.0,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M48 124.8L48 136.8",
+        "fill": "none",
+        "stroke": 1.0,
+        "dash": true
+      },
+      {
+        "type": "path",
+        "d": "M30 136.8L66 136.8A6 6 0 0 1 72 142.8L72 160.4A6 6 0 0 1 66 166.4L30 166.4A6 6 0 0 1 24 160.4L24 142.8A6 6 0 0 1 30 136.8Z",
+        "fill": "none",
+        "stroke": 1.2,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 48.0,
+        "y": 151.6,
+        "text": "入学",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M48 168.4L48 180.4",
+        "fill": "none",
+        "stroke": 1.0,
+        "dash": true
+      },
+      {
+        "type": "path",
+        "d": "M30 180.4L66 180.4A6 6 0 0 1 72 186.4L72 204A6 6 0 0 1 66 210L30 210A6 6 0 0 1 24 204L24 186.4A6 6 0 0 1 30 180.4Z",
+        "fill": "none",
+        "stroke": 1.2,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 48.0,
+        "y": 195.2,
+        "text": "军训",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M133.9 73.2L190.1 73.2A8 8 0 0 1 198.1 81.2L198.1 98.8A8 8 0 0 1 190.1 106.8L133.9 106.8A8 8 0 0 1 125.9 98.8L125.9 81.2A8 8 0 0 1 133.9 73.2Z",
+        "fill": "soft",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 162.0,
+        "y": 90.0,
+        "text": "2025 春",
+        "size": 14.0,
+        "bold": true
+      },
+      {
+        "type": "path",
+        "d": "M158 120.8A4 4 0 0 1 166 120.8A4 4 0 0 1 158 120.8Z",
+        "fill": "solid",
+        "stroke": 0.0,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M162 124.8L162 136.8",
+        "fill": "none",
+        "stroke": 1.0,
+        "dash": true
+      },
+      {
+        "type": "path",
+        "d": "M144 136.8L180 136.8A6 6 0 0 1 186 142.8L186 160.4A6 6 0 0 1 180 166.4L144 166.4A6 6 0 0 1 138 160.4L138 142.8A6 6 0 0 1 144 136.8Z",
+        "fill": "none",
+        "stroke": 1.2,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 162.0,
+        "y": 151.6,
+        "text": "高数",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M162 168.4L162 180.4",
+        "fill": "none",
+        "stroke": 1.0,
+        "dash": true
+      },
+      {
+        "type": "path",
+        "d": "M130 180.4L194 180.4A6 6 0 0 1 200 186.4L200 204A6 6 0 0 1 194 210L130 210A6 6 0 0 1 124 204L124 186.4A6 6 0 0 1 130 180.4Z",
+        "fill": "none",
+        "stroke": 1.2,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 162.0,
+        "y": 195.2,
+        "text": "程序设计",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M247.9 73.2L304.1 73.2A8 8 0 0 1 312.1 81.2L312.1 98.8A8 8 0 0 1 304.1 106.8L247.9 106.8A8 8 0 0 1 239.9 98.8L239.9 81.2A8 8 0 0 1 247.9 73.2Z",
+        "fill": "soft",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 276.0,
+        "y": 90.0,
+        "text": "2025 秋",
+        "size": 14.0,
+        "bold": true
+      },
+      {
+        "type": "path",
+        "d": "M272 120.8A4 4 0 0 1 280 120.8A4 4 0 0 1 272 120.8Z",
+        "fill": "solid",
+        "stroke": 0.0,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M276 124.8L276 136.8",
+        "fill": "none",
+        "stroke": 1.0,
+        "dash": true
+      },
+      {
+        "type": "path",
+        "d": "M258 136.8L294 136.8A6 6 0 0 1 300 142.8L300 160.4A6 6 0 0 1 294 166.4L258 166.4A6 6 0 0 1 252 160.4L252 142.8A6 6 0 0 1 258 136.8Z",
+        "fill": "none",
+        "stroke": 1.2,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 276.0,
+        "y": 151.6,
+        "text": "计组",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M276 168.4L276 180.4",
+        "fill": "none",
+        "stroke": 1.0,
+        "dash": true
+      },
+      {
+        "type": "path",
+        "d": "M244 180.4L308 180.4A6 6 0 0 1 314 186.4L314 204A6 6 0 0 1 308 210L244 210A6 6 0 0 1 238 204L238 186.4A6 6 0 0 1 244 180.4Z",
+        "fill": "none",
+        "stroke": 1.2,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 276.0,
+        "y": 195.2,
+        "text": "数据结构",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M361.9 73.2L418.1 73.2A8 8 0 0 1 426.1 81.2L426.1 98.8A8 8 0 0 1 418.1 106.8L361.9 106.8A8 8 0 0 1 353.9 98.8L353.9 81.2A8 8 0 0 1 361.9 73.2Z",
+        "fill": "soft",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 390.0,
+        "y": 90.0,
+        "text": "2026 春",
+        "size": 14.0,
+        "bold": true
+      },
+      {
+        "type": "path",
+        "d": "M386 120.8A4 4 0 0 1 394 120.8A4 4 0 0 1 386 120.8Z",
+        "fill": "solid",
+        "stroke": 0.0,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M390 124.8L390 136.8",
+        "fill": "none",
+        "stroke": 1.0,
+        "dash": true
+      },
+      {
+        "type": "path",
+        "d": "M372 136.8L408 136.8A6 6 0 0 1 414 142.8L414 160.4A6 6 0 0 1 408 166.4L372 166.4A6 6 0 0 1 366 160.4L366 142.8A6 6 0 0 1 372 136.8Z",
+        "fill": "none",
+        "stroke": 1.2,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 390.0,
+        "y": 151.6,
+        "text": "实习",
+        "size": 14.0,
+        "bold": false
+      }
+    ]
+  },
+  {
+    "x": -208.1,
+    "y": -157.6,
+    "width": 427.1,
+    "height": 262.6,
+    "items": [
+      {
+        "type": "text",
+        "x": 0.0,
+        "y": -134.0,
+        "text": "一周时间都去哪了",
+        "size": 14.0,
+        "bold": true
+      },
+      {
+        "type": "path",
+        "d": "M0 0L0 -90A90 90 0 0 1 33.1 83.7Z",
+        "fill": "soft",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M88.4 -16.9L106.1 -20.2L116.1 -20.2",
+        "fill": "none",
+        "stroke": 1.0,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 167.5,
+        "y": -20.2,
+        "text": "上课 22 (44.0%)",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M0 0L33.1 83.7A90 90 0 0 1 -89.8 5.7Z",
+        "fill": "soft",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M-48.2 76L-57.9 91.2L-67.9 91.2",
+        "fill": "none",
+        "stroke": 1.0,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": -119.3,
+        "y": 91.2,
+        "text": "自习 15 (30.0%)",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M0 0L-89.8 5.7A90 90 0 0 1 -69.3 -57.4Z",
+        "fill": "soft",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M-85.6 -27.8L-102.7 -33.4L-112.7 -33.4",
+        "fill": "none",
+        "stroke": 1.0,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": -160.4,
+        "y": -33.4,
+        "text": "运动 6 (12.0%)",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M0 0L-69.3 -57.4A90 90 0 0 1 -33.1 -83.7Z",
+        "fill": "soft",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M-52.9 -72.8L-63.5 -87.4L-73.5 -87.4",
+        "fill": "none",
+        "stroke": 1.0,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": -117.4,
+        "y": -87.4,
+        "text": "社团 4 (8.0%)",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M0 0L-33.1 -83.7A90 90 0 0 1 -0 -90Z",
+        "fill": "soft",
+        "stroke": 1.4,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M-16.9 -88.4L-20.2 -106.1L-30.2 -106.1",
+        "fill": "none",
+        "stroke": 1.0,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": -74.1,
+        "y": -106.1,
+        "text": "其他 3 (6.0%)",
+        "size": 14.0,
+        "bold": false
+      }
+    ]
   }
 ]

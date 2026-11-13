@@ -32,6 +32,15 @@ fn every_prefix_of_every_case_lays_out() {
 
 #[test]
 fn a_kind_not_laid_out_is_left_to_be_shown_as_written() {
-    assert!(docstream_diagram::diagram("pie title Pets\n\"Dogs\" : 386").is_none());
+    assert!(docstream_diagram::diagram("classDiagram\nclass Animal").is_none());
+    assert!(docstream_diagram::diagram("journey\ntitle My day").is_none());
     assert!(docstream_diagram::svg("graph TD\nA-->B").unwrap().starts_with("<svg"));
+}
+
+/// Every kind said to be laid out has a case that is.
+#[test]
+fn every_kind_named_has_a_case() {
+    for kind in docstream_diagram::KINDS {
+        assert!(cases().iter().any(|c| c.starts_with(kind) || c.starts_with(&format!("graph")) && kind == "flowchart"), "no case of {kind}");
+    }
 }
