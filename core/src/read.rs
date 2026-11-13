@@ -39,7 +39,13 @@ impl<'a> Reader<'a> {
 
     fn block(&mut self) -> Option<Block> {
         match self.next()? {
-            Event::Start(Tag::Paragraph) => Some(Block::Paragraph { inlines: self.inlines(TagEnd::Paragraph) }),
+            Event::Start(Tag::Paragraph) => {
+                let inlines = self.inlines(TagEnd::Paragraph);
+                // `$$…$$` standing alone is display math, as a block.
+                let mut meant = inlines.iter().filter(|inline| !matches!(inline, Inline::Text { text } if text.trim().is_empty()));
+                if let (Some(Inline::Math { tex, display: true }), None) = (meant.next(), meant.next()) { return Some(Block::Math { tex: tex.clone() }); }
+                Some(Block::Paragraph { inlines })
+            }
             Event::Start(Tag::Heading { level, .. }) => Some(Block::Heading { level: level as u8, inlines: self.inlines(TagEnd::Heading(level)) }),
             Event::Start(Tag::BlockQuote(kind)) => {
                 let blocks = self.blocks_until_end();
@@ -159,8 +165,8 @@ impl<'a> Reader<'a> {
         match self.next()? {
             Event::Text(text) => Some(Inline::Text { text: text.to_string() }),
             Event::Code(text) => Some(Inline::Code { text: text.to_string() }),
-            Event::InlineMath(tex) => Some(Inline::Math { tex: tex.to_string() }),
-            Event::DisplayMath(tex) => Some(Inline::Math { tex: tex.to_string() }),
+            Event::InlineMath(tex) => Some(Inline::Math { tex: tex.to_string(), display: false }),
+            Event::DisplayMath(tex) => Some(Inline::Math { tex: tex.trim().to_string(), display: true }),
             Event::Html(text) | Event::InlineHtml(text) => Some(Inline::Text { text: text.to_string() }),
             Event::SoftBreak => Some(Inline::Text { text: "\n".into() }),
             Event::HardBreak => Some(Inline::Break),
@@ -198,7 +204,7 @@ fn merge(inlines: Vec<Inline>) -> Vec<Inline> {
 pub(crate) fn plain(inlines: &[Inline]) -> String {
     inlines.iter().map(|inline| match inline {
         Inline::Text { text } | Inline::Code { text } => text.clone(),
-        Inline::Math { tex } => tex.clone(),
+        Inline::Math { tex, .. } => tex.clone(),
         Inline::Strong { children } | Inline::Emphasis { children } | Inline::Strike { children } | Inline::Highlight { children } | Inline::Superscript { children } | Inline::Subscript { children } | Inline::Link { children, .. } => plain(children),
         Inline::Image { alt, .. } => alt.clone(),
         Inline::Break => "\n".into(),

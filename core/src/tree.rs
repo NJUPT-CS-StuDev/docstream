@@ -40,8 +40,8 @@ pub enum Inline {
     Superscript { children: Vec<Inline> },
     Subscript { children: Vec<Inline> },
     Code { text: String },
-    /// Inline math, as TeX.
-    Math { tex: String },
+    /// Math within text, as TeX: `$…$`, or `$$…$$` written amid the text and set on a line of its own (`display`).
+    Math { tex: String, display: bool },
     Link { href: String, children: Vec<Inline> },
     Image { src: String, alt: String },
     Break,

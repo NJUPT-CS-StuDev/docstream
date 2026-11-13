@@ -5,7 +5,7 @@ export type Inline =
     | { type: 'text'; text: string }
     | { type: 'strong' | 'emphasis' | 'strike' | 'highlight' | 'superscript' | 'subscript'; children: Inline[] }
     | { type: 'code'; text: string }
-    | { type: 'math'; tex: string }
+    | { type: 'math'; tex: string; display: boolean }
     | { type: 'link'; href: string; children: Inline[] }
     | { type: 'image'; src: string; alt: string }
     | { type: 'break' };
