@@ -1,0 +1,21 @@
+import { readFileSync } from 'node:fs';
+import { beforeAll, describe, expect, it } from 'vitest';
+import { initialize, read, Stream } from './index.js';
+
+beforeAll(async () => { await initialize(readFileSync(new URL('../wasm/docstream_wasm_bg.wasm', import.meta.url))); });
+
+describe('docstream on the web', () => {
+    it('reads the fixture into the tree the core keeps', () => {
+        const text = readFileSync(new URL('../../core/tests/fixtures/everything.md', import.meta.url), 'utf8').replace(/\r\n/g, '\n');
+        const kept = JSON.parse(readFileSync(new URL('../../core/tests/fixtures/everything.json', import.meta.url), 'utf8'));
+        expect(read(text)).toEqual(kept);
+    });
+    it('streams, the block being written already styled, settled ones kept', () => {
+        const stream = new Stream();
+        expect(JSON.stringify(stream.push('结论：**三次都避开').blocks[0]!.block)).toContain('"strong"');
+        const first = stream.push('了**。\n\n下一段').blocks[0]!;
+        expect(first.settled).toBe(true);
+        expect(stream.finish().blocks.map(block => block.block.type)).toEqual(['paragraph', 'paragraph']);
+        stream.free();
+    });
+});

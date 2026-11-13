@@ -1,0 +1,391 @@
+[
+  {
+    "type": "heading",
+    "level": 1,
+    "inlines": [
+      {
+        "type": "text",
+        "text": "复习计划"
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "inlines": [
+      {
+        "type": "text",
+        "text": "找好了，"
+      },
+      {
+        "type": "strong",
+        "children": [
+          {
+            "type": "text",
+            "text": "三次都避开了上课时间"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "，周五晚上之前能复习完："
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "ordered": false,
+    "start": 1,
+    "items": [
+      {
+        "blocks": [
+          {
+            "type": "paragraph",
+            "inlines": [
+              {
+                "type": "text",
+                "text": "周一 "
+              },
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "11:25–12:25"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "，上午两节课之间"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "blocks": [
+          {
+            "type": "paragraph",
+            "inlines": [
+              {
+                "type": "text",
+                "text": "周三 12:00–13:00，午饭后"
+              }
+            ]
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "start": 1,
+            "items": [
+              {
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "inlines": [
+                      {
+                        "type": "text",
+                        "text": "带上 "
+                      },
+                      {
+                        "type": "code",
+                        "text": "计网"
+                      },
+                      {
+                        "type": "text",
+                        "text": " 的笔记"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "checked": true,
+        "blocks": [
+          {
+            "type": "paragraph",
+            "inlines": [
+              {
+                "type": "text",
+                "text": "已经交了实验报告"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "blocks": [
+          {
+            "type": "paragraph",
+            "inlines": [
+              {
+                "type": "text",
+                "text": "还没复习第 3 章"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "ordered": true,
+    "start": 1,
+    "items": [
+      {
+        "blocks": [
+          {
+            "type": "paragraph",
+            "inlines": [
+              {
+                "type": "text",
+                "text": "先看 "
+              },
+              {
+                "type": "highlight",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "重点"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "blocks": [
+          {
+            "type": "paragraph",
+            "inlines": [
+              {
+                "type": "text",
+                "text": "再做题：x"
+              },
+              {
+                "type": "superscript",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "2"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " 和 H"
+              },
+              {
+                "type": "subscript",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "2"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "O，"
+              },
+              {
+                "type": "strike",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "划掉"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "alert",
+    "kind": "tip",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "inlines": [
+          {
+            "type": "text",
+            "text": "教3-302 一直空到晚上 9 点。"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "quote",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "inlines": [
+          {
+            "type": "text",
+            "text": "普通引用，带 "
+          },
+          {
+            "type": "emphasis",
+            "children": [
+              {
+                "type": "text",
+                "text": "强调"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": " 和 "
+          },
+          {
+            "type": "link",
+            "href": "https://studev.hicancan.top/map/",
+            "children": [
+              {
+                "type": "text",
+                "text": "链接"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "。"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "table",
+    "align": [
+      "left",
+      "center",
+      "right"
+    ],
+    "head": [
+      [
+        {
+          "type": "text",
+          "text": "时间"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "地点"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "说明"
+        }
+      ]
+    ],
+    "rows": [
+      [
+        [
+          {
+            "type": "text",
+            "text": "周一 11:25"
+          }
+        ],
+        [
+          {
+            "type": "text",
+            "text": "教3-302"
+          }
+        ],
+        [
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "text": "空"
+              }
+            ]
+          }
+        ]
+      ],
+      [
+        [
+          {
+            "type": "text",
+            "text": "周三 12:00"
+          }
+        ],
+        [
+          {
+            "type": "text",
+            "text": "图书馆"
+          }
+        ],
+        [
+          {
+            "type": "text",
+            "text": "午饭后"
+          }
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "paragraph",
+    "inlines": [
+      {
+        "type": "text",
+        "text": "行内公式 "
+      },
+      {
+        "type": "math",
+        "tex": "E = mc^2"
+      },
+      {
+        "type": "text",
+        "text": "，行间公式："
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "inlines": [
+      {
+        "type": "math",
+        "tex": "\n\\int_0^1 x^2 \\, dx = \\frac{1}{3}\n"
+      }
+    ]
+  },
+  {
+    "type": "code",
+    "language": "rust",
+    "text": "fn main() { println!(\"hi\"); }"
+  },
+  {
+    "type": "html",
+    "text": "<div>原始 HTML 只当文字</div>"
+  },
+  {
+    "type": "rule"
+  },
+  {
+    "type": "paragraph",
+    "inlines": [
+      {
+        "type": "text",
+        "text": "最后一句。"
+      }
+    ]
+  }
+]

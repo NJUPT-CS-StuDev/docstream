@@ -1,0 +1,13 @@
+[package]
+name = "docstream-wasm"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+docstream-core = { path = "../core" }
+serde_json.workspace = true
+wasm-bindgen.workspace = true

@@ -1,0 +1,11 @@
+[package]
+name = "docstream-core"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "A document kernel: Markdown as written by people and by models, read into one tree every client draws, as it streams"
+
+[dependencies]
+pulldown-cmark.workspace = true
+serde.workspace = true
+serde_json.workspace = true

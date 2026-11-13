@@ -1,0 +1,33 @@
+{
+  "name": "docstream",
+  "version": "0.1.0",
+  "description": "A document kernel: Markdown as people and models write it, read into one tree every client draws, as it streams. Rust and WebAssembly",
+  "license": "AGPL-3.0-only",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "wasm/docstream_wasm.js",
+    "wasm/docstream_wasm.d.ts",
+    "wasm/docstream_wasm_bg.wasm",
+    "wasm/docstream_wasm_bg.wasm.d.ts",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build:wasm": "wasm-pack build ../wasm --release --target web --out-dir ../js/wasm --out-name docstream_wasm --no-pack",
+    "build": "npm run build:wasm && tsc -p tsconfig.build.json && node -e \"import('./dist/index.js')\"",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "prepack": "npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.9.0",
+    "vitest": "^5.0.5"
+  }
+}
