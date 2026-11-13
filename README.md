@@ -37,12 +37,12 @@ in the colour of the text around it. A kind not laid out is left for the client 
 | `diagram` | The diagram layout (`docstream-diagram`); cases in `diagram/tests/cases.md` |
 | `html` | The tree drawn as HTML with formulas and diagrams as SVG (`docstream-html`), for pages built ahead of time |
 | `wasm` | WebAssembly binding; `js` wraps it as the `docstream` package with TypeScript types |
-| `android` | UniFFI binding for Android and other JVM clients (`top.hicancan.docstream`) |
+| `native` | UniFFI binding for the native clients: Kotlin for Android (`top.hicancan.docstream`), C# for Windows |
 
 ## Build
 
 ```powershell
-pwsh ./build.ps1          # Rust tests, the JS package and its tests, then the Android libraries
+pwsh ./build.ps1          # Rust tests, the JS package and its tests, then the native libraries for Android and Windows
 ```
 
 `UPDATE_GOLDEN=1 cargo test` rewrites the kept trees and layouts after a deliberate change;

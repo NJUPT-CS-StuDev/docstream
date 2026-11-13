@@ -1,4 +1,4 @@
-//! docstream for Android (and any JVM): the same reader, its tree handed over as JSON through UniFFI, and the same
+//! docstream for the native clients, Android and Windows: the same reader, its tree handed over as JSON through UniFFI, and the same
 //! typesetter and diagram layout, their drawings as paths, rules and words.
 use std::sync::Mutex;
 
@@ -18,12 +18,12 @@ pub fn diagram(source: String) -> Option<String> { docstream_diagram::json(&sour
 
 /// Text as it streams in; each call gives the whole document as it now stands, as JSON.
 #[derive(uniffi::Object)]
-pub struct Stream(Mutex<docstream_core::Stream>);
+pub struct DocStream(Mutex<docstream_core::Stream>);
 
 #[uniffi::export]
-impl Stream {
+impl DocStream {
     #[uniffi::constructor]
-    pub fn new() -> Self { Stream(Mutex::new(docstream_core::Stream::new())) }
+    pub fn new() -> Self { DocStream(Mutex::new(docstream_core::Stream::new())) }
     pub fn push(&self, more: String) -> String { serde_json::to_string(&self.0.lock().unwrap().push(&more)).unwrap_or_default() }
     pub fn finish(&self) -> String { serde_json::to_string(&self.0.lock().unwrap().finish()).unwrap_or_default() }
 }
