@@ -3114,5 +3114,247 @@
         "bold": false
       }
     ]
+  },
+  {
+    "x": -4.0,
+    "y": -4.0,
+    "width": 903.9,
+    "height": 235.6,
+    "items": [
+      {
+        "type": "text",
+        "x": 436.0,
+        "y": 9.8,
+        "text": "11月14日 周六 安排与空档",
+        "size": 14.0,
+        "bold": true
+      },
+      {
+        "type": "text",
+        "x": 14.0,
+        "y": 41.4,
+        "text": "上午",
+        "size": 14.0,
+        "bold": true
+      },
+      {
+        "type": "text",
+        "x": 90.0,
+        "y": 69.0,
+        "text": "嵌入式手机终端开发技术 教",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "text",
+        "x": 90.0,
+        "y": 88.6,
+        "text": "4-208",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M191.9 68.8L429.9 68.8A4 4 0 0 1 433.9 72.8L433.9 84.8A4 4 0 0 1 429.9 88.8L191.9 88.8A4 4 0 0 1 187.9 84.8L187.9 72.8A4 4 0 0 1 191.9 68.8Z",
+        "fill": "soft",
+        "stroke": 2.4,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 14.0,
+        "y": 118.2,
+        "text": "午后",
+        "size": 14.0,
+        "bold": true
+      },
+      {
+        "type": "text",
+        "x": 132.0,
+        "y": 147.0,
+        "text": "空档 午饭午休",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M437.9 137L543.9 137A4 4 0 0 1 547.9 141L547.9 153A4 4 0 0 1 543.9 157L437.9 157A4 4 0 0 1 433.9 153L433.9 141A4 4 0 0 1 437.9 137Z",
+        "fill": "soft",
+        "stroke": 1.2,
+        "dash": false
+      },
+      {
+        "type": "text",
+        "x": 118.0,
+        "y": 177.0,
+        "text": "空档 教三自习可用",
+        "size": 14.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M551.9 167L867.9 167A4 4 0 0 1 871.9 171L871.9 183A4 4 0 0 1 867.9 187L551.9 187A4 4 0 0 1 547.9 183L547.9 171A4 4 0 0 1 551.9 167Z",
+        "fill": "soft",
+        "stroke": 1.2,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M187.9 200L871.9 200",
+        "fill": "none",
+        "stroke": 1.0,
+        "dash": false
+      },
+      {
+        "type": "path",
+        "d": "M187.9 29.6L187.9 204",
+        "fill": "none",
+        "stroke": 0.6,
+        "dash": true
+      },
+      {
+        "type": "text",
+        "x": 187.9,
+        "y": 215.8,
+        "text": "08:00",
+        "size": 12.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M259.9 29.6L259.9 204",
+        "fill": "none",
+        "stroke": 0.6,
+        "dash": true
+      },
+      {
+        "type": "text",
+        "x": 259.9,
+        "y": 215.8,
+        "text": "09:00",
+        "size": 12.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M331.9 29.6L331.9 204",
+        "fill": "none",
+        "stroke": 0.6,
+        "dash": true
+      },
+      {
+        "type": "text",
+        "x": 331.9,
+        "y": 215.8,
+        "text": "10:00",
+        "size": 12.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M403.9 29.6L403.9 204",
+        "fill": "none",
+        "stroke": 0.6,
+        "dash": true
+      },
+      {
+        "type": "text",
+        "x": 403.9,
+        "y": 215.8,
+        "text": "11:00",
+        "size": 12.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M475.9 29.6L475.9 204",
+        "fill": "none",
+        "stroke": 0.6,
+        "dash": true
+      },
+      {
+        "type": "text",
+        "x": 475.9,
+        "y": 215.8,
+        "text": "12:00",
+        "size": 12.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M547.9 29.6L547.9 204",
+        "fill": "none",
+        "stroke": 0.6,
+        "dash": true
+      },
+      {
+        "type": "text",
+        "x": 547.9,
+        "y": 215.8,
+        "text": "13:00",
+        "size": 12.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M619.9 29.6L619.9 204",
+        "fill": "none",
+        "stroke": 0.6,
+        "dash": true
+      },
+      {
+        "type": "text",
+        "x": 619.9,
+        "y": 215.8,
+        "text": "14:00",
+        "size": 12.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M691.9 29.6L691.9 204",
+        "fill": "none",
+        "stroke": 0.6,
+        "dash": true
+      },
+      {
+        "type": "text",
+        "x": 691.9,
+        "y": 215.8,
+        "text": "15:00",
+        "size": 12.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M763.9 29.6L763.9 204",
+        "fill": "none",
+        "stroke": 0.6,
+        "dash": true
+      },
+      {
+        "type": "text",
+        "x": 763.9,
+        "y": 215.8,
+        "text": "16:00",
+        "size": 12.0,
+        "bold": false
+      },
+      {
+        "type": "path",
+        "d": "M835.9 29.6L835.9 204",
+        "fill": "none",
+        "stroke": 0.6,
+        "dash": true
+      },
+      {
+        "type": "text",
+        "x": 835.9,
+        "y": 215.8,
+        "text": "17:00",
+        "size": 12.0,
+        "bold": false
+      }
+    ]
   }
 ]

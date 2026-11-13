@@ -58,13 +58,18 @@ fn moment(text: &str) -> Option<Minute> {
     Some(day * 1440 + minute)
 }
 
-/// A while as written: 3d, 2h, 90m, 1w, 1.5h.
+/// A while as written: 3d, 2h, 90m, 1w, 1.5h, or parts of it together: 3h25m, 1d12h.
 fn duration(text: &str) -> Option<Minute> {
     let text = text.trim();
-    let unit = text.chars().last()?;
-    let per = match unit { 'm' => 1.0, 'h' => 60.0, 'd' => 1440.0, 'w' => 10080.0, _ => return None };
-    let n: f64 = text[..text.len() - 1].trim().parse().ok()?;
-    (n >= 0.0).then(|| (n * per).round() as Minute)
+    let mut total = 0.0;
+    let mut number = String::new();
+    for c in text.chars() {
+        let per = match c { 'm' => 1.0, 'h' => 60.0, 'd' => 1440.0, 'w' => 10080.0, c if c.is_ascii_digit() || c == '.' => { number.push(c); continue } _ => return None };
+        let n: f64 = number.parse().ok()?;
+        total += n * per;
+        number.clear();
+    }
+    (number.is_empty() && !text.is_empty()).then(|| total.round() as Minute)
 }
 
 pub fn gantt(body: &[&str]) -> Option<Diagram> {
@@ -97,14 +102,14 @@ pub fn gantt(body: &[&str]) -> Option<Diagram> {
             let names = text.strip_prefix("after ")?;
             names.split_whitespace().filter_map(|n| ends.iter().rev().find(|(id, _)| id == n).map(|(_, e)| *e)).max()
         };
-        let (start, end) = match parts[..] {
-            [only] => { let start = last_end?; (start, duration(only).map(|d| start + d).or_else(|| moment(only))?) }
-            [from, to, ..] => {
-                let start = moment(from).or_else(|| after(from))?;
-                (start, duration(to).map(|d| start + d).or_else(|| moment(to))?)
-            }
-            [] => { if milestone { let start = last_end?; (start, start) } else { continue } }
+        // A task whose times cannot be read is left out; the rest of the chart still stands.
+        let times = match parts[..] {
+            [only] => last_end.and_then(|start| Some((start, duration(only).map(|d| start + d).or_else(|| moment(only))?))),
+            [from, to, ..] => moment(from).or_else(|| after(from)).and_then(|start| Some((start, duration(to).map(|d| start + d).or_else(|| moment(to))?))),
+            [] if milestone => last_end.map(|start| (start, start)),
+            [] => None,
         };
+        let Some((start, end)) = times else { continue };
         let end = end.max(start);
         last_end = Some(end);
         if let Some(id) = id { ends.push((id, end)); }
