@@ -26,7 +26,7 @@ describe('docstream on the web', () => {
     });
     it('lays out Mermaid as SVG, and leaves a kind it does not know to be shown as written', () => {
         expect(diagram('graph TD\nA[开始] --> B[结束]')).toContain('开始');
-        expect(diagram('pie\n"a": 1')).toBeUndefined();
+        expect(diagram('classDiagram\nclass A')).toBeUndefined();
     });
     it('draws a whole document as HTML for pages built ahead of time', () => {
         const page = html('## 标题\n\n$x^2$ 与\n\n```mermaid\ngraph TD\nA-->B\n```');
