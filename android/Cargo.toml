@@ -18,4 +18,5 @@ bindgen = ["uniffi/cli"]
 [dependencies]
 uniffi = "~0.32.0"
 docstream-core = { path = "../core" }
+docstream-math = { path = "../math" }
 serde_json.workspace = true

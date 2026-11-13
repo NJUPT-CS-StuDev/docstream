@@ -14,11 +14,19 @@ nothing more can join it: a client redraws only what changed. The block still be
 marks (`**`, `` ` ``, `==`, `$`) were closed, so it does not flicker between plain and styled. Fed a character at a
 time, a settled block never changes and the end equals reading the whole at once; the tests hold both.
 
+**Math.** TeX is typeset on the device by TeX's own rules (The TeXbook, appendix G), every measure read from the
+OpenType MATH table of New Computer Modern Math: fractions, radicals, scripts and limits, stretchy delimiters built
+from the font's variants and assemblies, accents, matrices, cases, aligned equations. A formula comes back as glyph
+outlines, rules and words (CJK in `\text{}`, drawn by the client's own font), or as SVG in the colour of the text
+around it. What is not understood is shown as written; an unfinished formula, streamed a character at a time, still
+typesets.
+
 ## Layout
 
 | Part | What |
 | --- | --- |
 | `core` | The reader and the tree (`docstream-core`), with golden fixtures in `core/tests/fixtures` |
+| `math` | The typesetter (`docstream-math`): `tex` reads TeX, `layout` sets it; cases in `math/tests/cases.tex` |
 | `wasm` | WebAssembly binding; `js` wraps it as the `docstream` package with TypeScript types |
 | `android` | UniFFI binding for Android and other JVM clients (`top.hicancan.docstream`) |
 
@@ -28,6 +36,7 @@ time, a settled block never changes and the end equals reading the whole at once
 pwsh ./build.ps1          # Rust tests, the JS package and its tests, then the Android libraries
 ```
 
-`UPDATE_GOLDEN=1 cargo test -p docstream-core` rewrites the kept trees after a deliberate change.
+`UPDATE_GOLDEN=1 cargo test` rewrites the kept trees and layouts after a deliberate change;
+`cargo run -p docstream-math --example gallery -- gallery.html` draws every math case on one page to look at.
 
 Licensed under AGPL-3.0-only.

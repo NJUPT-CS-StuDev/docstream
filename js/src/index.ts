@@ -1,4 +1,4 @@
-import init, { read as wasmRead, Stream as WasmStream, type InitInput } from '../wasm/docstream_wasm.js';
+import init, { math as wasmMath, read as wasmRead, Stream as WasmStream, type InitInput } from '../wasm/docstream_wasm.js';
 import type { Block, Update } from './types.js';
 export type * from './types.js';
 
@@ -23,3 +23,6 @@ export class Stream {
     finish(): Update { return JSON.parse(this.inner.finish()) as Update; }
     free(): void { this.inner.free(); }
 }
+
+/** TeX typeset as SVG sized in ems, in the colour of the text around it; `display` for a formula on its own line. */
+export function math(tex: string, display = false): string { return wasmMath(tex, display); }

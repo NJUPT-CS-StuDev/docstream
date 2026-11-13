@@ -1,0 +1,11 @@
+[package]
+name = "docstream-math"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "TeX math typeset on the device by TeX's rules, read from the font's OpenType MATH table, into paths every client draws"
+
+[dependencies]
+ttf-parser = "0.25.1"
+serde.workspace = true
+serde_json.workspace = true

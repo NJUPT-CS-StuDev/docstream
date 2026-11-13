@@ -1,5 +1,5 @@
 [workspace]
-members = ["core", "wasm", "android"]
+members = ["core", "math", "wasm", "android"]
 resolver = "2"
 
 [workspace.package]

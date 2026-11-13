@@ -1,6 +1,6 @@
 import { readFileSync } from 'node:fs';
 import { beforeAll, describe, expect, it } from 'vitest';
-import { initialize, read, Stream } from './index.js';
+import { initialize, math, read, Stream } from './index.js';
 
 beforeAll(async () => { await initialize(readFileSync(new URL('../wasm/docstream_wasm_bg.wasm', import.meta.url))); });
 
@@ -17,5 +17,11 @@ describe('docstream on the web', () => {
         expect(first.settled).toBe(true);
         expect(stream.finish().blocks.map(block => block.block.type)).toEqual(['paragraph', 'paragraph']);
         stream.free();
+    });
+    it('typesets TeX as SVG that sits on the baseline in the colour of the text', () => {
+        const svg = math('\\frac{a}{b}', true);
+        expect(svg.startsWith('<svg')).toBe(true);
+        expect(svg).toContain('fill="currentColor"');
+        expect(svg).toMatch(/vertical-align:-[\d.]+em/);
     });
 });
