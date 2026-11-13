@@ -1,5 +1,5 @@
 //! How each diagram in cases.md is laid out, kept beside it; `UPDATE_GOLDEN=1 cargo test` writes it anew after a
-//! deliberate change, and the gallery example draws them to look at.
+//! deliberate change, and the diagrams example draws them to look at.
 use std::fs;
 use std::path::Path;
 

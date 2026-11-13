@@ -1,4 +1,4 @@
-//! Every case the golden tests hold, drawn on one page to look at: `cargo run -p docstream-math --example gallery -- out.html`.
+//! Every case the golden tests hold, drawn on one page to look at: `cargo run -p docstream-math --example formulas -- out.html`.
 fn main() {
     let out = std::env::args().nth(1).expect("where to write the page");
     let cases = std::fs::read_to_string(concat!(env!("CARGO_MANIFEST_DIR"), "/tests/cases.tex")).expect("the cases");

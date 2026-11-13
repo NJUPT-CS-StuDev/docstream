@@ -1,5 +1,5 @@
 //! How each case in cases.tex is typeset, kept beside it as layout without outlines; `UPDATE_GOLDEN=1 cargo test`
-//! writes it anew after a deliberate change, and the gallery example draws them to look at.
+//! writes it anew after a deliberate change, and the formulas example draws them to look at.
 use std::fs;
 use std::path::Path;
 
