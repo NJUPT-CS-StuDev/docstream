@@ -35,6 +35,7 @@ in the colour of the text around it. A kind not laid out is left for the client 
 | `core` | The reader and the tree (`docstream-core`), with golden fixtures in `core/tests/fixtures` |
 | `math` | The typesetter (`docstream-math`): `tex` reads TeX, `layout` sets it; cases in `math/tests/cases.tex` |
 | `diagram` | The diagram layout (`docstream-diagram`); cases in `diagram/tests/cases.md` |
+| `html` | The tree drawn as HTML with formulas and diagrams as SVG (`docstream-html`), for pages built ahead of time |
 | `wasm` | WebAssembly binding; `js` wraps it as the `docstream` package with TypeScript types |
 | `android` | UniFFI binding for Android and other JVM clients (`top.hicancan.docstream`) |
 
@@ -45,7 +46,7 @@ pwsh ./build.ps1          # Rust tests, the JS package and its tests, then the A
 ```
 
 `UPDATE_GOLDEN=1 cargo test` rewrites the kept trees and layouts after a deliberate change;
-`cargo run -p docstream-math --example gallery -- gallery.html` (or `docstream-diagram`) draws every case on one page
-to look at.
+`cargo run -p docstream-math --example formulas -- formulas.html` (and `-p docstream-diagram --example diagrams`) draws
+every case on one page to look at.
 
 Licensed under AGPL-3.0-only.

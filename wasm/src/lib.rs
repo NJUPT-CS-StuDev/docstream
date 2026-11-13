@@ -14,6 +14,10 @@ pub fn math(tex: &str, display: bool) -> String { docstream_math::svg(tex, displ
 #[wasm_bindgen]
 pub fn diagram(source: &str) -> Option<String> { docstream_diagram::svg(source) }
 
+/// A whole document drawn as HTML, its formulas and diagrams as SVG: for pages built ahead of time.
+#[wasm_bindgen]
+pub fn html(text: &str) -> String { docstream_html::html(text) }
+
 /// Text as it streams in; each call gives the whole document as it now stands, as JSON.
 #[wasm_bindgen]
 pub struct Stream(docstream_core::Stream);

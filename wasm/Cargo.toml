@@ -11,5 +11,6 @@ crate-type = ["cdylib", "rlib"]
 docstream-core = { path = "../core" }
 docstream-math = { path = "../math" }
 docstream-diagram = { path = "../diagram" }
+docstream-html = { path = "../html" }
 serde_json.workspace = true
 wasm-bindgen.workspace = true

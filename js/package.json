@@ -8,7 +8,8 @@
     ".": {
       "types": "./dist/index.d.ts",
       "default": "./dist/index.js"
-    }
+    },
+    "./docstream_wasm_bg.wasm": "./wasm/docstream_wasm_bg.wasm"
   },
   "files": [
     "dist",

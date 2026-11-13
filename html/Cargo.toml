@@ -1,0 +1,11 @@
+[package]
+name = "docstream-html"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "A document drawn as HTML at build time: the docstream tree with its formulas typeset and diagrams laid out as SVG"
+
+[dependencies]
+docstream-core = { path = "../core" }
+docstream-math = { path = "../math" }
+docstream-diagram = { path = "../diagram" }

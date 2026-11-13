@@ -1,6 +1,6 @@
 import { readFileSync } from 'node:fs';
 import { beforeAll, describe, expect, it } from 'vitest';
-import { diagram, initialize, math, read, Stream } from './index.js';
+import { diagram, html, initialize, math, read, Stream } from './index.js';
 
 beforeAll(async () => { await initialize(readFileSync(new URL('../wasm/docstream_wasm_bg.wasm', import.meta.url))); });
 
@@ -27,5 +27,11 @@ describe('docstream on the web', () => {
     it('lays out Mermaid as SVG, and leaves a kind it does not know to be shown as written', () => {
         expect(diagram('graph TD\nA[开始] --> B[结束]')).toContain('开始');
         expect(diagram('pie\n"a": 1')).toBeUndefined();
+    });
+    it('draws a whole document as HTML for pages built ahead of time', () => {
+        const page = html('## 标题\n\n$x^2$ 与\n\n```mermaid\ngraph TD\nA-->B\n```');
+        expect(page).toContain('<h2 id="标题">');
+        expect(page).toContain('<span class="math math-inline"><svg');
+        expect(page).toContain('<figure class="diagram"><svg');
     });
 });
